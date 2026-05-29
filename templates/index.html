@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Mohammed Ali Hussain | Professor & Researcher</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#hero" class="logo">
+    <div class="logo-av">MA</div><!-- optional: add <img src="logo.png"> inside .logo-av -->
+    <div class="logo-txt"><b>Mohammed Ali Hussain</b><span>Professor · Ph.D CS&amp;E</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" class="on">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('publications') }}">Publications</a></li>
+    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+      <li><a href="{{ url_for('downloads_index') }}">pdfs</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+  </ul>
+  <div class="ham" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-x" onclick="closeMob()" aria-label="Close menu">&#10005;</button>
+  <a href="{{ url_for('index') }}" onclick="closeMob()">Home</a>
+  <a href="{{ url_for('about') }}" onclick="closeMob()">About</a>
+  <a href="{{ url_for('publications') }}" onclick="closeMob()">Publications</a>
+  <a href="{{ url_for('downloads_index') }}" onclick="closeMob()">pdfs</a>
+  <a href="{{ url_for('contact') }}"  onclick="closeMob()">Contact</a>
+</div>
+
+<!-- ══ HERO ══
+=================================================================
+  IMAGE GUIDE — replace every src="" with your file path:
+  Slide images   → src="./images/slide1.jpg"  etc.
+  Arrow icons    → src="./icons/arrow-left.png" / arrow-right.png
+  (24x24 or 32x32 PNG/SVG recommended for arrows)
+================================================================= -->
+<div class="hero" id="hero">
+
+  <!-- SLIDE 1: replace src="" with your image -->
+  <div class="slide-bg on" id="s0">
+    <img class="bg-img" src="{{ url_for('static', filename='images/slide01.jpg') }}" alt="Award Ceremony">
+    <!--<div class="bg-grad" style="background:linear-gradient(135deg,#e4d8c0,#c8b490 45%,#8898b8)"></div>-->
+  </div>
+  <!-- SLIDE 2 -->
+  <div class="slide-bg" id="s1">
+    <img class="bg-img" src="{{ url_for('static', filename='images/slide02.jpg') }}" alt="International Conference">
+   <!-- <div class="bg-grad" style="background:linear-gradient(135deg,#ccd8e8,#a8b8cc 45%,#6688aa)"></div>-->
+  </div>
+  <!-- SLIDE 3 -->
+  <div class="slide-bg" id="s2">
+    <img class="bg-img" src="{{ url_for('static', filename='images/slide03.jpg') }}" alt="Keynote Speech">
+   <!-- <div class="bg-grad" style="background:linear-gradient(135deg,#d8c8b4,#b8a880 45%,#7888a8)"></div>-->
+  </div>
+  <!-- SLIDE 4 -->
+  <div class="slide-bg" id="s3">
+    <img class="bg-img" src="{{ url_for('static', filename='images/slide04.jpg') }}" alt="AI ML Webinar">
+   <!-- <div class="bg-grad" style="background:linear-gradient(135deg,#dce4d0,#b4c494 45%,#7898a0)"></div>-->
+  </div>
+
+  <div class="hero-body">
+    <div class="hero-text" id="heroText">
+      <div class="hero-eyebrow"><span class="hero-pulse"></span>Computer Science &amp; Engineering</div>
+      <h1 class="hero-h1">Dr. <i>Mohammed</i><br>Ali Hussain</h1>
+      <p class="hero-sub">Professor &middot; Researcher &middot; Keynote Speaker</p>
+      <p class="hero-p">Ph.D. from Acharya Nagarjuna University with 17+ years of academic and research excellence across India and abroad, recognized with prestigious national awards.</p>
+      <div class="hero-btns">
+        <a href="{{ url_for('about') }}" class="btn-solid">Explore Profile</a>
+        <a href="{{ url_for('publications') }}" class="btn-line">View Publications</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-ui">
+    <div class="dots" id="dots">
+      <button class="dot on" onclick="goSlide(0)"></button>
+      <button class="dot" onclick="goSlide(1)"></button>
+      <button class="dot" onclick="goSlide(2)"></button>
+      <button class="dot" onclick="goSlide(3)"></button>
+    </div>
+    <div class="slide-arrows">
+      <!-- LEFT ARROW BUTTON: replace src="" with your left-arrow icon image -->
+      <button class="s-arr" onclick="prevSlide()" aria-label="Previous slide">
+        <img class="arr-img" src="" alt="Previous"
+          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%230d1b35%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M15 18l-6-6 6-6%22/%3E%3C/svg%3E'">
+      </button>
+      <!-- RIGHT ARROW BUTTON: replace src="" with your right-arrow icon image -->
+      <button class="s-arr" onclick="nextSlide()" aria-label="Next slide">
+        <img class="arr-img" src="" alt="Next"
+          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%230d1b35%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M9 18l6-6-6-6%22/%3E%3C/svg%3E'">
+      </button>
+    </div>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="pBar"></div></div>
+</div>
+
+<!-- TICKER: replace t-ico src="" with small 16x16 award/medal icons -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="tick-item">Rashtriya Gaurav Award 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Mahatma Gandhi Award &mdash; Teaching &amp; Research Excellence</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Bharath Shiksha Award 2018</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Best Teacher Award &middot; KL University 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Best Computer Science Faculty 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Engg. &amp; Tech. Research Excellence Award 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Innovative Research Award 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Indian Status Award 2018</span><span class="tick-sep">&#10022;</span>
+    <!-- duplicate for seamless loop -->
+    <span class="tick-item">Rashtriya Gaurav Award 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Mahatma Gandhi Award &mdash; Teaching &amp; Research Excellence</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Bharath Shiksha Award 2018</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Best Teacher Award &middot; KL University 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Best Computer Science Faculty 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Engg. &amp; Tech. Research Excellence Award 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Innovative Research Award 2017</span><span class="tick-sep">&#10022;</span>
+    <span class="tick-item">Indian Status Award 2018</span><span class="tick-sep">&#10022;</span>
+  </div>
+</div>
+
+<!-- ABOUT: replace ab-photo src="" with your portrait -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-pic-col fade-left">
+      <div class="deco1"></div>
+      <div class="about-pic">
+        <img class="ab-photo" src="{{ url_for('static', filename='images/about.jpg') }}" alt="Dr Mohammed Ali Hussain">
+        <div class="about-pic-bg"><span>MAH</span></div>
+        <div class="about-pic-label"><strong>Dr. Mohammed Ali Hussain</strong><span>Professor &middot; Researcher</span></div>
+      </div>
+      <div class="deco2"></div>
+      <div class="exp-badge"><b>17+</b><span>Yrs Experience</span></div>
+    </div>
+    <div class="about-body fade-right">
+      <div class="tag"><span class="tag-bar"></span>About</div>
+      <h2 class="st">The Academic<br>Behind the Research</h2>
+      <div class="div"></div>
+      <p>Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. With over 17 years of immersive teaching and research experience across India and abroad.</p>
+      <div class="blockq"><p>"Awarded with the Mahatma Gandhi Award for Teaching &amp; Research Excellence, Engg. &amp; Tech. Research Excellence Award, Rashtriya Gaurav Award, and Best Computer Science Faculty Award."</p></div>
+      <p>His research spans cloud computing security, mobile authentication, machine learning, and network security &mdash; with international conference presentations in Malaysia and keynote speeches across India.</p>
+      <!-- chip icons: replace src="" with 16x16 certification/brand icons -->
+      <div class="chips">
+        <span class="chip"><img class="ch-ico" src="{{ url_for('static', filename='images/icons/sap.png') }}" alt="SAP">SAP Consultant</span>
+        <span class="chip"><img class="ch-ico" src="{{ url_for('static', filename='images/icons/db2.png') }}" alt="DB2">DB2 Certified</span>
+        <span class="chip"><img class="ch-ico" src="{{ url_for('static', filename='images/icons/microsoft.png') }}" alt="Microsoft">Microsoft Certified</span>
+        <span class="chip"><img class="ch-ico" src="{{ url_for('static', filename='images/icons/network.png') }}" alt="Network">Network Security</span>
+        <span class="chip"><img class="ch-ico" src="{{ url_for('static', filename='images/icons/wifi.png') }}" alt="Wireless">Wireless Adhoc</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE CARDS: replace fi src="" with 26x26 white-friendly icons -->
+<section class="features">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="tc" style="margin-bottom:44px">
+      <div class="tag fade-up"><span class="tag-bar"></span>Expertise &amp; Service<span class="tag-bar"></span></div>
+      <h2 class="st fade-up" data-d="1">Areas of Excellence</h2>
+      <div class="div cx fade-up" data-d="2"></div>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card fade-up" data-d="1">
+        <div class="feat-ico"><img class="fi" src="{{ url_for('static', filename='images/icons/workshop.png') }}" alt="Workshops icon"></div>
+        <h3>Workshops</h3>
+        <p>Intensive hands-on workshops in Machine Learning, Cloud Security, and Computer Science &mdash; shaping industry-ready professionals globally.</p>
+      </div>
+      <div class="feat-card fade-up" data-d="2">
+        <div class="feat-ico"><img class="fi" src="{{ url_for('static', filename='images/icons/pub.png') }}" alt="Publications icon"></div>
+        <h3>Publications</h3>
+        <p>10+ publications in top-tier international journals and conference proceedings, advancing frontiers of CS research worldwide.</p>
+      </div>
+      <div class="feat-card fade-up" data-d="3">
+        <div class="feat-ico"><img class="fi" src="{{ url_for('static', filename='images/icons/rev.png') }}" alt="Review icon"></div>
+        <h3>Review Member</h3>
+        <p>Trusted technical reviewer for IEEE/ACM Transactions and Scopus-indexed journals &mdash; upholding the highest research integrity standards.</p>
+      </div>
+      <div class="feat-card fade-up" data-d="4">
+        <div class="feat-ico"><img class="fi" src="{{ url_for('static', filename='images/icons/mem.png') }}" alt="Memberships icon"></div>
+        <h3>Memberships</h3>
+        <p>Member of 15+ professional organizations globally, contributing to standards, policies and the future of computing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS & CERTIFICATIONS: replace ci src="" with cert logo icons -->
+<section class="hl-sec">
+  <div class="hl-grid">
+    <div class="fade-left">
+      <div class="tag"><span class="tag-bar"></span>Accolades</div>
+      <h2 class="st">Personal Highlights</h2>
+      <div class="div"></div>
+      <ul class="hl-table">
+        <li class="hl-row"><span class="hl-dot"></span>Bharath Shiksha Award '18</li>
+        <li class="hl-row"><span class="hl-dot"></span>Indian Status Award '18</li>
+        <li class="hl-row"><span class="hl-dot"></span>Mahatma Gandhi Award '18</li>
+        <li class="hl-row"><span class="hl-dot"></span>Best Teacher Award KL Univ. '17</li>
+        <li class="hl-row"><span class="hl-dot"></span>Best CS Faculty Award '17</li>
+        <li class="hl-row"><span class="hl-dot"></span>Engg. &amp; Tech. Research Excellence '17</li>
+        <li class="hl-row"><span class="hl-dot"></span>Rashtriya Gaurav Award '17</li>
+        <li class="hl-row"><span class="hl-dot"></span>Innovative Research Award '17</li>
+        <li class="hl-row"><span class="hl-dot"></span>Award for Research Excellence '16</li>
+        <li class="hl-row"><span class="hl-dot"></span>Young Faculty Award '15</li>
+        <li class="hl-row"><span class="hl-dot"></span>Excellence in Research Award '14</li>
+        <li class="hl-row"><span class="hl-dot"></span>Best Academic Researcher '12</li>
+      </ul>
+    </div>
+    <div class="fade-right" data-d="2">
+      <div class="tag"><span class="tag-bar"></span>Credentials</div>
+      <h2 class="st">Certifications</h2>
+      <div class="div"></div>
+      <div class="cert-box">
+        <div class="cert-head">Professional Certifications</div>
+        <div class="cert-body">
+          <div class="cert-row"><img class="ci" src="{{ url_for('static', filename='images/icons/sap.png') }}" alt="SAP">SAP Consultant</div>
+          <div class="cert-row"><img class="ci" src="{{ url_for('static', filename='images/icons/db2.png') }} alt="DB2">DB2 Certified Professional</div>
+          <div class="cert-row"><img class="ci" src="{{ url_for('static', filename='images/icons/microsoft.png') }}" alt="Microsoft">Microsoft Certified Professional</div>
+          <div class="cert-row"><img class="ci" src="{{ url_for('static', filename='images/icons/wifi.png') }}" alt="Wireless">Researcher &mdash; Wireless Adhoc Networks</div>
+          <div class="cert-row"><img class="ci" src="{{ url_for('static', filename='images/icons/network.png') }}" alt="Security">Networks &amp; Web Security Specialist</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS AUTO-SCROLL: replace pti/pbi src="" with publication type icons -->
+
+<div class="carousel-section pub-sec" id="publications">
+  <div class="c-header tc fade-up">
+    <div class="tag" style="justify-content:center;color:rgba(201,151,42,.9)">
+      <span style="background:var(--gold2)" class="tag-bar"></span>
+      Research Output
+      <span style="background:var(--gold2)" class="tag-bar"></span>
+    </div>
+    <h2 class="st" style="color:#fff">
+      Publications
+      <span class="pub-count-badge">50+</span>
+    </h2>
+    <div class="div cx" style="background:linear-gradient(90deg,var(--gold),transparent)"></div>
+  </div>
+ 
+  <div class="c-wrap">
+    <div class="c-track" id="pubTrack">
+ 
+      <!-- ── CARD 1 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Book &middot; Editor</div>
+        <h3>Authentication and Access Control for Secure Communication in Mobile Cloud Computing</h3>
+        <p>Comprehensive treatment of security protocols for mobile cloud environments, addressing authentication challenges in distributed systems.</p>
+        <div class="pub-meta">
+          <span class="p-badge">Immortal Publications 2020</span>
+          <span class="p-badge">ISBN: 978-93-5407-019-8</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 2 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; SCI Indexed</div>
+        <h3>Token System based Efficient Route Optimization in MANET for VANET in Smart City</h3>
+        <p>Novel token-based routing mechanism optimizing vehicular ad-hoc networks for smart city deployments, co-authored with S.J. Sultanuddin.</p>
+        <div class="pub-meta">
+          <span class="p-badge">Transactions on Emerging Telecom. Technologies</span>
+          <span class="p-badge">Science Citation Indexed (SCI)</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 3 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>Secure Sharing of Documents using Image Encryption and Key Image</h3>
+        <p>A secure document sharing framework leveraging image encryption and key-image techniques for confidential data transfer.</p>
+        <div class="pub-meta">
+          <span class="p-badge">IJRTE Vol-8 Issue-4</span>
+          <span class="p-badge">Scopus Indexed &middot; Nov 2019</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 4 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; IJCSIS</div>
+        <h3>Quality of Service Issues in Wireless Ad-Hoc Network (IEEE 802.11B)</h3>
+        <p>Analysis of QoS challenges in wireless ad-hoc networking environments using the IEEE 802.11B protocol standard.</p>
+        <div class="pub-meta">
+          <span class="p-badge">IJCSIS Vol.8 No.3</span>
+          <span class="p-badge">June 2010</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 5 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>NTRU Encryption using Huffman Compression</h3>
+        <p>Integration of NTRU lattice-based encryption with Huffman compression for enhanced secure data transmission efficiency.</p>
+        <div class="pub-meta">
+          <span class="p-badge">JTAIT &middot; Scopus Indexed</span>
+          <span class="p-badge">E-ISSN 1817-3195</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 6 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>LWE Encryption using LZW Compression</h3>
+        <p>Combining Learning With Errors (LWE) post-quantum encryption with LZW lossless compression for efficient secure communication.</p>
+        <div class="pub-meta">
+          <span class="p-badge">Middle-East J. of Scientific Research</span>
+          <span class="p-badge">Scopus Indexed &middot; 2015</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 7 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>Energy Efficient Intrusion Detection Scheme with Clustering for Wireless Sensor Networks</h3>
+        <p>Cluster-based intrusion detection system designed to maximize energy efficiency in resource-constrained wireless sensor networks.</p>
+        <div class="pub-meta">
+          <span class="p-badge">TELKOMNIKA Indonesian J. of Elec. Engg.</span>
+          <span class="p-badge">Vol. 15 Issue 1 &middot; July 2015</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 8 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>Deployment of Mobile Ad-hoc Network Ticket Based QoS Routing Protocol for Healthcare</h3>
+        <p>Healthcare-focused QoS routing protocol utilizing ticket-based mechanisms in mobile ad-hoc network deployments.</p>
+        <div class="pub-meta">
+          <span class="p-badge">Indian Journal of Science &amp; Technology</span>
+          <span class="p-badge">Scopus Indexed &middot; July 2015</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 9 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>An Optimal Secure and Efficient AODV Protocol for MANETs using Hashing</h3>
+        <p>Enhanced AODV routing protocol incorporating hashing mechanisms for improved security and efficiency in mobile ad-hoc networks.</p>
+        <div class="pub-meta">
+          <span class="p-badge">IJAER Vol.9 No.14</span>
+          <span class="p-badge">Scopus Indexed</span>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 10 ── -->
+      <div class="pub-card">
+        <div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div>
+        <h3>Performance and Security Analysis for Image Encryption using Key Image</h3>
+        <p>Comprehensive performance benchmarking and security evaluation of key-image-based encryption techniques for digital image protection.</p>
+        <div class="pub-meta">
+          <span class="p-badge">Indian Journal of Science &amp; Technology</span>
+          <span class="p-badge">Scopus Indexed &middot; Dec 2015</span>
+        </div>
+      </div>
+ 
+      <!-- ══ DUPLICATE SET for seamless infinite loop ══ -->
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Book &middot; Editor</div><h3>Authentication and Access Control for Secure Communication in Mobile Cloud Computing</h3><p>Security protocols for mobile cloud environments and distributed authentication systems.</p><div class="pub-meta"><span class="p-badge">Immortal Publications 2020</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; SCI Indexed</div><h3>Token System based Efficient Route Optimization in MANET for VANET in Smart City</h3><p>Token-based vehicular ad-hoc network routing for smart city infrastructure.</p><div class="pub-meta"><span class="p-badge">Transactions on Emerging Telecom. Technologies</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>Secure Sharing of Documents using Image Encryption and Key Image</h3><p>Document sharing framework using image encryption and key-image techniques.</p><div class="pub-meta"><span class="p-badge">IJRTE &middot; Scopus Indexed</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; IJCSIS</div><h3>Quality of Service Issues in Wireless Ad-Hoc Network (IEEE 802.11B)</h3><p>QoS analysis in wireless ad-hoc networking using IEEE 802.11B standard.</p><div class="pub-meta"><span class="p-badge">IJCSIS Vol.8 No.3 &middot; 2010</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>NTRU Encryption using Huffman Compression</h3><p>Lattice-based NTRU encryption integrated with Huffman compression algorithms.</p><div class="pub-meta"><span class="p-badge">JTAIT &middot; Scopus Indexed</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>LWE Encryption using LZW Compression</h3><p>Post-quantum LWE encryption combined with LZW lossless compression.</p><div class="pub-meta"><span class="p-badge">Middle-East J. of Scientific Research</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>Energy Efficient Intrusion Detection Scheme with Clustering for Wireless Sensor Networks</h3><p>Energy-optimized cluster-based IDS for wireless sensor network security.</p><div class="pub-meta"><span class="p-badge">TELKOMNIKA &middot; July 2015</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>Deployment of Mobile Ad-hoc Network Ticket Based QoS Routing Protocol for Healthcare</h3><p>Healthcare QoS routing in mobile ad-hoc networks via ticket-based protocols.</p><div class="pub-meta"><span class="p-badge">Indian J. of Science &amp; Technology</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>An Optimal Secure and Efficient AODV Protocol for MANETs using Hashing</h3><p>Hash-enhanced AODV routing for secure mobile ad-hoc network communication.</p><div class="pub-meta"><span class="p-badge">IJAER &middot; Scopus Indexed</span></div></div>
+      <div class="pub-card"><div class="pub-tag"><span class="pub-type-dot"></span>Journal &middot; Scopus</div><h3>Performance and Security Analysis for Image Encryption using Key Image</h3><p>Security evaluation of key-image encryption for digital image protection.</p><div class="pub-meta"><span class="p-badge">Indian J. of Science &amp; Technology &middot; 2015</span></div></div>
+ 
+    </div>
+  </div>
+ 
+  <!-- ── View More Button ── -->
+  <div class="pub-view-more">
+    <a href="{{ url_for('publications') }}" class="btn-pub-more">
+      View All Publications
+      <span class="arrow-icon">&#8594;</span>
+    </a>
+  </div>
+</div>
+ 
+
+<!-- WORKSHOPS AUTO-SCROLL: replace wi/wdi/wli src="" with your icons -->
+<div class="carousel-section ws-sec" id="workshops">
+  <div class="c-header tc fade-up">
+    <div class="tag" style="justify-content:center"><span class="tag-bar"></span>Learning &amp; Development<span class="tag-bar"></span></div>
+    <h2 class="st">Workshops Conducted</h2>
+    <div class="div cx"></div>
+  </div>
+  <div class="c-wrap">
+    <div class="c-track" id="wsTrack">
+      <div class="ws-card">
+        <div class="ws-ico-box"><img class="wi" src="" alt="AI Workshop"></div>
+        <div class="ws-date"><img class="wdi" src="" alt="date">April 30, 2020</div>
+        <h3>AI &amp; Machine Learning &mdash; Challenges, Opportunities and Emerging Applications</h3>
+        <p>Intensive webinar covering AI foundations, ML pipelines, real-world applications, and future trends in intelligent systems.</p>
+        <div class="ws-loc"><img class="wli" src="" alt="location">Online Webinar</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-ico-box"><img class="wi" src="" alt="Cloud Workshop"></div>
+        <div class="ws-date"><img class="wdi" src="" alt="date">October 2019</div>
+        <h3>Cloud Security &amp; Authentication Protocols in Mobile Computing Environments</h3>
+        <p>Workshop on cloud-based authentication, access control mechanisms, and secure mobile communication protocols with hands-on labs.</p>
+        <div class="ws-loc"><img class="wli" src="" alt="location">Kuala Lumpur, Malaysia</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-ico-box"><img class="wi" src="" alt="Security Workshop"></div>
+        <div class="ws-date"><img class="wdi" src="" alt="date">2018</div>
+        <h3>Network Security &amp; Wireless Adhoc Systems Research Workshop</h3>
+        <p>Deep-dive workshop on wireless adhoc network vulnerabilities, intrusion detection systems, and robust security architectures.</p>
+        <div class="ws-loc"><img class="wli" src="" alt="location">KL University, India</div>
+      </div>
+      <div class="ws-card">
+        <div class="ws-ico-box"><img class="wi" src="" alt="Data Workshop"></div>
+        <div class="ws-date"><img class="wdi" src="" alt="date">2017</div>
+        <h3>Big Data Analytics &amp; Intelligent Systems for Engineering Research</h3>
+        <p>Hands-on workshop on data science methodologies, analytics pipelines, and deployment of intelligent systems in engineering contexts.</p>
+        <div class="ws-loc"><img class="wli" src="" alt="location">Research Institute, India</div>
+      </div>
+      <!-- duplicates -->
+      <div class="ws-card"><div class="ws-ico-box"><img class="wi" src="" alt=""></div><div class="ws-date"><img class="wdi" src="" alt="">April 30, 2020</div><h3>AI &amp; Machine Learning &mdash; Challenges, Opportunities and Emerging Applications</h3><p>Intensive webinar covering AI foundations, ML pipelines, and future trends.</p><div class="ws-loc"><img class="wli" src="" alt="">Online Webinar</div></div>
+      <div class="ws-card"><div class="ws-ico-box"><img class="wi" src="" alt=""></div><div class="ws-date"><img class="wdi" src="" alt="">October 2019</div><h3>Cloud Security &amp; Authentication Protocols in Mobile Computing Environments</h3><p>Cloud-based authentication and secure mobile communication protocols.</p><div class="ws-loc"><img class="wli" src="" alt="">Kuala Lumpur, Malaysia</div></div>
+      <div class="ws-card"><div class="ws-ico-box"><img class="wi" src="" alt=""></div><div class="ws-date"><img class="wdi" src="" alt="">2018</div><h3>Network Security &amp; Wireless Adhoc Systems Research Workshop</h3><p>Wireless adhoc network vulnerabilities and robust security architectures.</p><div class="ws-loc"><img class="wli" src="" alt="">KL University, India</div></div>
+      <div class="ws-card"><div class="ws-ico-box"><img class="wi" src="" alt=""></div><div class="ws-date"><img class="wdi" src="" alt="">2017</div><h3>Big Data Analytics &amp; Intelligent Systems for Engineering Research</h3><p>Data science methodologies and deployment of intelligent systems.</p><div class="ws-loc"><img class="wli" src="" alt="">Research Institute, India</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ACHIEVEMENTS AUTO-SCROLL: replace ai/ali/api src="" with your icons -->
+
+<div class="carousel-section ach-sec" id="achievements">
+  <div class="c-header tc fade-up">
+    <div class="tag" style="justify-content:center"><span class="tag-bar"></span>Milestones<span class="tag-bar"></span></div>
+    <h2 class="st">Achievements</h2>
+    <div class="div cx"></div>
+  </div>
+  <div class="c-wrap">
+    <div class="c-track" id="achTrack">
+ 
+      <!-- ── CARD 1 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#1a2e50,#0d1b35)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi01.png') }}" alt="AI ML Webinar">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Webinar icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Webinar &middot; 2020</div>
+          <h3>Delivered a Webinar on AI &amp; ML &mdash; Challenges, Opportunities and Emerging Applications on 30-4-2020</h3>
+          <p>April 30, 2020</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 2 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#183568,#0d1b35)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi02.png') }}" alt="ICTIDS 2019 Malaysia">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Conference icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">International Conference &middot; 2019</div>
+          <h3>Paper Presented in International Conference &mdash; ICTIDS 2019 on 12th October 2019, Malaysia</h3>
+          <p>12th October 2019 &middot; Kuala Lumpur, Malaysia</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 3 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#142850,#0c1a34)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi03.png') }}" alt="ICIES Keynote">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Keynote icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Keynote Speaker</div>
+          <h3>Keynote Speaker at ICIES &mdash; International Conference on Innovation in Engineering &amp; Science</h3>
+          <p>ICIES International Conference</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 4 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#1a3050,#0e2040)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi04.png') }}" alt="Guest Lecture Gudlavalleru">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Lecture icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Guest Lecture &middot; 2017</div>
+          <h3>Guest Lecture @ Gudlavalleru Engineering College &mdash; IoT: Networking Technologies and Research Challenges</h3>
+          <p>5th September 2017 &middot; Gudlavalleru, India</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 5 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#162848,#0c1a36)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi05.png') }}" alt="Guest Lecture PB Siddhartha">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Lecture icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Keynote Speaker</div>
+          <h3>Guest Lecture &amp; Keynote Speaker @ PB Siddhartha College of Arts and Science</h3>
+          <p>PB Siddhartha College &middot; Vijayawada, India</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 6 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#162a52,#0f1f3e)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi06.png') }}" alt="Mahatma Gandhi Award">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Gandhi Award icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Award &middot; 2018</div>
+          <h3>Mahatma Gandhi Award for Teaching &amp; Research Excellence @ New Delhi</h3>
+          <p>National Recognition &middot; New Delhi, 2018</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 7 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#1c2e58,#0e1e3c)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi07.png') }}" alt="Best Academic Researcher Award">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Award icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Award &middot; 2012</div>
+          <h3>Best Academic Researcher Award &mdash; Association of Scientists, Developers and Faculties (ASDF), Pondicherry</h3>
+          <p>30th December 2012 &middot; Pondicherry, India</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 8 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#183060,#0d1b38)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi08.png') }}" alt="Keynote International Conference">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Keynote icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Keynote Speaker</div>
+          <h3>Keynote Speaker @ International Conference &mdash; Recognized for Research &amp; Innovation</h3>
+          <p>International Conference &middot; India</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 9 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#1a3262,#0d1c3a)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi09.png') }}" alt="Best Teacher Award KL University">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="Teacher Award icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Award &middot; 2017</div>
+          <h3>Best Teacher Award &mdash; Dept. of Electronics &amp; Computer Engineering, KL University 2017&ndash;18</h3>
+          <p>KL University &middot; 2017</p>
+        </div>
+      </div>
+ 
+      <!-- ── CARD 10 ── -->
+      <div class="ach-card">
+        <div class="ach-top has-photo" style="background:linear-gradient(135deg,#1e3060,#0f1e3a)">
+          <img class="ach-photo" src="{{ url_for('static', filename='images/achievements/achi10.png') }}" alt="ASDF Global Awards">
+          <div class="ach-photo-overlay"></div>
+          <div class="ach-ico-ring"><img class="ai" src="" alt="ASDF icon"></div>
+        </div>
+        <div class="ach-body">
+          <div class="ach-lbl">Award &middot; 2013</div>
+          <h3>ASDF Global Awards &mdash; Keynote Speaker at ICIES, Manorama Hotel, Vijayawada, A.P., India</h3>
+          <p>21st &amp; 22nd Feb 2013 &middot; Vijayawada, India</p>
+        </div>
+      </div>
+ 
+      <!-- ══ DUPLICATE SET for seamless infinite loop ══ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#1a2e50,#0d1b35)"><img class="ach-photo" src="images/achievements/webinar-aiml.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Webinar &middot; 2020</div><h3>Delivered Webinar on AI &amp; ML &mdash; Challenges, Opportunities and Emerging Applications</h3><p>April 30, 2020</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#183568,#0d1b35)"><img class="ach-photo" src="images/achievements/ictids-2019.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Conference &middot; 2019</div><h3>Paper Presented at ICTIDS 2019 &mdash; Kuala Lumpur, Malaysia</h3><p>12th October 2019</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#142850,#0c1a34)"><img class="ach-photo" src="images/achievements/icies-keynote.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Keynote Speaker</div><h3>Keynote Speaker at ICIES Conference</h3><p>ICIES International Conference</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#1a3050,#0e2040)"><img class="ach-photo" src="images/achievements/guest-lecture-gudlavalleru.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Guest Lecture &middot; 2017</div><h3>Guest Lecture @ Gudlavalleru Engineering College</h3><p>5th September 2017 &middot; India</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#162848,#0c1a36)"><img class="ach-photo" src="images/achievements/guest-lecture-pbsiddhartha.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Keynote Speaker</div><h3>Guest Lecture @ PB Siddhartha College of Arts and Science</h3><p>Vijayawada, India</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#162a52,#0f1f3e)"><img class="ach-photo" src="images/achievements/mahatma-gandhi-award.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Award &middot; 2018</div><h3>Mahatma Gandhi Award for Teaching &amp; Research Excellence</h3><p>New Delhi, 2018</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#1c2e58,#0e1e3c)"><img class="ach-photo" src="images/achievements/best-academic-researcher.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Award &middot; 2012</div><h3>Best Academic Researcher Award &mdash; ASDF, Pondicherry</h3><p>30th December 2012</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#183060,#0d1b38)"><img class="ach-photo" src="images/achievements/keynote-international.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Keynote Speaker</div><h3>Keynote Speaker @ International Conference</h3><p>International Conference &middot; India</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#1a3262,#0d1c3a)"><img class="ach-photo" src="images/achievements/best-teacher-award.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Award &middot; 2017</div><h3>Best Teacher Award &mdash; KL University 2017&ndash;18</h3><p>KL University &middot; 2017</p></div></div>
+ 
+      <div class="ach-card"><div class="ach-top has-photo" style="background:linear-gradient(135deg,#1e3060,#0f1e3a)"><img class="ach-photo" src="images/achievements/asdf-global-awards.jpg" alt=""><div class="ach-photo-overlay"></div><div class="ach-ico-ring"><img class="ai" src="" alt=""></div></div><div class="ach-body"><div class="ach-lbl">Award &middot; 2013</div><h3>ASDF Global Awards &mdash; Keynote Speaker, Vijayawada</h3><p>21st &amp; 22nd Feb 2013</p></div></div>
+ -->
+    </div>
+  </div>
+</div>
+<!-- STATS + STICKY IMAGE
+  pro-img  → your portrait photo
+  sbi      → small award badge icons (18x18)
+  si       → stat card icons (22x22) — will be tinted gold automatically
+-->
+<section class="stats-sec" id="stats">
+  <div class="stats-inner">
+    <div class="stats-sticky fade-left">
+      <div class="sticky-card">
+        <img class="pro-img" src="{{ url_for('static', filename='images/about.jpg') }}" alt="Dr Mohammed Ali Hussain">
+        <div class="sticky-fallback"><span>MAH</span></div>
+        <div class="sticky-overlay"></div>
+        <div class="sticky-body">
+          <div class="sticky-name">Dr. Mohammed Ali Hussain</div>
+          <div class="sticky-role">Professor &middot; Ph.D. CS&amp;E &middot; Researcher</div>
+          <div class="sticky-badges">
+            <div class="sticky-badge"><img class="sbi" src="{{ url_for('static', filename='images/icons/award.png') }}" alt="award"><span>Rashtriya Gaurav Award 2017</span></div>
+            <div class="sticky-badge"><img class="sbi" src="{{ url_for('static', filename='images/icons/award.png') }}" alt="award"><span>Mahatma Gandhi Award 2018</span></div>
+            <div class="sticky-badge"><img class="sbi" src="{{ url_for('static', filename='images/icons/award.png') }}" alt="award"><span>Best CS Faculty Award 2017</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fade-right">
+      <div class="stats-kicker"><span class="stats-kicker-bar"></span>By the Numbers</div>
+      <h2 class="stats-h2">A Career of<br>Impact &amp; Excellence</h2>
+      <p class="stats-p">17+ years of dedicated teaching, pioneering research, and professional contributions across India and internationally recognized institutions.</p>
+      <div class="stats-grid">
+        <div class="stat-card fade-up" data-d="1">
+          <div class="stat-ico-box"><img class="si" src="{{ url_for('static', filename='images/icons/workshop.png') }}" alt="Workshops"></div>
+          <div class="stat-n" data-count="4">0</div>
+          <div class="stat-lbl">Workshops</div>
+          <div class="stat-desc">Hands-on workshops conducted globally</div>
+        </div>
+        <div class="stat-card fade-up" data-d="2">
+          <div class="stat-ico-box"><img class="si" src="{{ url_for('static', filename='images/icons/pub.png') }}" alt="Publications"></div>
+          <div class="stat-n" data-count="10">0</div>
+          <div class="stat-lbl">Publications</div>
+          <div class="stat-desc">Research papers &amp; book publications</div>
+        </div>
+        <div class="stat-card fade-up" data-d="3">
+          <div class="stat-ico-box"><img class="si" src="{{ url_for('static', filename='images/icons/rev.png') }}" alt="Review Member"></div>
+          <div class="stat-n" data-count="4">0</div>
+          <div class="stat-lbl">Review Member</div>
+          <div class="stat-desc">Journals as technical peer reviewer</div>
+        </div>
+        <div class="stat-card fade-up" data-d="4">
+          <div class="stat-ico-box"><img class="si" src="{{ url_for('static', filename='images/icons/mem.png') }}" alt="Memberships"></div>
+          <div class="stat-n" data-count="15">0</div>
+          <div class="stat-lbl">Memberships</div>
+          <div class="stat-desc">Professional organizations worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW AUTO-SCROLL: replace rri/rpi src="" with pen/check icons -->
+<div class="carousel-section rev-sec" id="review">
+  <div class="c-header tc fade-up">
+    <div class="tag" style="justify-content:center"><span class="tag-bar"></span>Editorial Boards<span class="tag-bar"></span></div>
+    <h2 class="st">As Review Member</h2>
+    <div class="div cx"></div>
+  </div>
+  <div class="c-wrap">
+    <div class="c-track" id="revTrack">
+
+      <!-- === INTERNATIONAL JOURNALS === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Journal of Computational Science &mdash; Scopus &amp; Elsevier Indexed Journal</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">Scopus</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Elsevier</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer Science and Information Security (IJCSIS)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCSIS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">InfoSec</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">International</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>IEEE/ACM Transactions on Networking &mdash; Premier International Networking Research Journal</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">ACM</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Networking</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Advanced Research in Computer Science (IJARCS)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJARCS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Journal of Information Security and Applications &mdash; Elsevier Publication</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">Elsevier</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">InfoSec</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>The IAENG International Conference on Communication Systems and Applications (ICCSA)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IAENG</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Communication</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>The IAENG International Conference on Internet Computing and Web Services (ICIWS)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IAENG</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Web Services</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer Science and Network Security (IJCSNS)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCSNS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Network Security</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Science and Engineering in Computer Science (IJSECS)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJSECS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Advancements in Computing Technology (IJACT)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJACT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Computing</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer Networks (IJCN)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCN</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Networking</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer Science Issues (IJCSI)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCSI</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Peer Technical Review Member</div>
+        <h3>IEEE International Conference on Machine Learning and Computing (ICMLC 2011), Singapore</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Machine Learning</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Singapore</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Secure Digital Information Age (IJSDIA)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJSDIA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">InfoSec</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer Science &amp; Information Technology (IJCSIT)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCSIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Association of Scientists, Developers and Faculties (ASDF) &mdash; International Journals &amp; Conferences</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ASDF</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">International</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>IEEE Symposium on Computers &amp; Informatics (ISCI 2011), IEEE Computer Society, Malaysia</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Malaysia</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Novel and Advanced Computer Science Applications (IJACSA)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJACSA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Journal on Wireless and Mobile Communication (JWMC)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">JWMC</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Wireless</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Indian Journal of Science and Technology (IJST)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJST</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">India</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer and Electrical Engineering (IJCEE)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Advances in Information Sciences and Service Sciences (AISS)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">AISS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Information Science</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>The International Arab Journal of Information Technology (IAJIT)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IAJIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Arab Region</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Science and Advanced Technology (IJSAT)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJSAT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>The Second International Conference on Computer Science and Information Technology (CCSIT 2012), January 2&ndash;4, 2012, Bangalore, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">CCSIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">2012</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Bangalore</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Journal of Current Computer Engineering Research (IJCER)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCER</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Journal of Current Engineering Research (IJCER)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCER</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Engineering</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer and Information Technology (IJCIT)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Scientific and Engineering Research (IJSER)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJSER</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Computer Science and Technology (IJCST)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCST</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal on Cloud Computing, Services and Architecture (IJCCSA)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJCCSA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Cloud Computing</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>Scientific Research and Impact (SRI)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">SRI</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Research</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Association of Scientific Innovation and Research (IASIR)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IASIR</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Innovation</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Engineering Research and Technology (IJRET)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJRET</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Engineering</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Journal of Research in Engineering and Technology (IJRET)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IJRET</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Peer Review</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>2012 IEEE International Conference on Computational Intelligence and Computing Research (ICCIC), Tamilnadu College of Engineering, Coimbatore, India, Dec 18&ndash;20, 2012</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCIC 2012</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">India</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>2013 IEEE Symposium on Wireless Telecommunications Applications (ISWTA2012)</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Wireless</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>2013 IEEE Symposium on Computers &amp; Informatics will be held in Langkawi, Malaysia from 7&ndash;9 April 2013</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Malaysia</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div>
+        <h3>International Conference on Intelligent Systems and Control (ISCO 2013), to be held at Karpagam College of Engineering on 4th &amp; 5th January at Coimbatore, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ISCO 2013</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">India</span>
+        </div>
+      </div>
+
+      <!-- === PROGRAM / TECHNICAL COMMITTEE MEMBERS === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Program Committee Member</div>
+        <h3>1st International Online Conference on Research in Science and MANAGEMENT (IOCRNEMO2014), 26 July 2014, Dehradun, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IOCRNEMO</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">2014</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>World Congress on Computing and Communication Technologies (WCCCT &ndash; 2014), February 27 to March 01 2014, Tamil Nadu, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">WCCCT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Tamil Nadu</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>International Conference on Advance Computing and Communication (ICACC-2013) March 16&ndash;17 2013, in Ranchi, India. ICACC-2013</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICACC</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">2013</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Ranchi</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>Information &amp; Communication Technology-EurAsia Conference 2013, Yogyakarta (Indonesia) 25th&ndash;29th March, 2013</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICT-EurAsia</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Indonesia</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>Third International Conference on Wireless, Mobile Networks &amp; Applications (WiMoA-2011) Dubai, UAE</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">WiMoA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Dubai, UAE</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>11th International Conference on Computational Science and its Applications (ICCSA 2011) the University of Cantabria, Santander, Spain</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCSA 2011</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Spain</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>2012 IEEE Asia &ndash; Pacific Conference on Applied Electromagnetics (APACE 2012), 11&ndash;13 December 2012, Audition Legacy Hotel, Melaka, Malaysia</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">APACE 2012</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Malaysia</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>8th ICCNT: 2012 International Conference on Computing and Network Technologies (8th INC, 2nd ICCNS and 2nd ICMC), August 27&ndash;29, Gyeongju, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCNT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">2012</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>8th International Conference on Networked Computing (INC2013), August 27th&ndash;29th in Gyeongju, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">INC 2013</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>6th International Conference on New Trends in Information Science, Service Science and Data Mining (NISS, ICMA, and NASMT), October 23&ndash;25 Taipei, Taiwan</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">NISS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Taiwan</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>6th International Conference on Computing and Convergence Technology (ICCIT, ICEI, and ICACT), December 3&ndash;5, 2012, Seoul, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Seoul</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>8th ICCNT: 2012 International Conference on Computing and Network Technologies (8th INC and 3rd ICNIT), April 14&ndash;16 2012, Seoul, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCNT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Seoul 2012</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>3rd International Conference on Data Mining and Intelligent Information Technology Applications (ICMIA), October 24&ndash;25, 2011, Macao</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICMIA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Macao</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>7th International Conference on Networked Computing and Advanced Information Management (NCM2011), June 21&ndash;23, 2011, Gyeongju, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">NCM 2011</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>International Conference on Computer Science, Engineering and Information Technology (CSEIT-2011), September 23&ndash;25, 2011, Tirunelveli, Tamil Nadu, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">CSEIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">India</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>World Congress on Information and Communication Technologies (WICT-2011), December 11&ndash;14, 2011, Mumbai, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">WICT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Mumbai</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>4th International Conference on Interaction Sciences: IT, Human and Digital Content (ICIS-2011), August 16&ndash;18, 2011, Busan, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICIS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>International Conference on Mobile IT Convergence (CMIC), September 26&ndash;28, 2011, Gumi, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">CMIC</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>10th International Conference on North-East Asia Symposium on Nano, Information Technology and Reliability (NASINT2011), from October 24&ndash;26, 2011, Macao</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">NASINT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Macao</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>International Conference on Data Mining and Intelligent Information Technology Applications (ICMIA2011), October 24&ndash;26, 2011, Macao, Venezuela</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICMIA 2011</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Macao</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>5th International Conference on New Trends in Information and Service Science (NISS), October 24&ndash;26, 2011, Macao</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">NISS 2011</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Macao</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>6th International Conference on Computer Science and Convergence Technology (ICCIT), November 29&ndash;Dec 1, 2011, Jeju Island, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Jeju Island</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>7th International Conference on Advanced Information Management and Service (ICIMS), Nov 29&ndash;Dec 1, Jeju, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICIMS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Jeju</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>2nd International Conference on Advancements in Computing Technology (ICACT), Nov 29&ndash;Dec 1, 2011, Jeju Island, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICACT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Jeju Island</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>2nd International Conference on Engineering and Industries (ICEI), Nov 29&ndash;Dec 1, 2011, Jeju Island, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICEI</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Jeju Island</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>The First International workshop on Signal and Image Processing (SIP 2012), January 3 &amp; 4, 2012, Bangalore, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">SIP 2012</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Bangalore</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>Second International Conference on Computer Science, Engineering &amp; Applications (CCSEA-2012), May 25&ndash;27, 2012, Delhi, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">CCSEA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Delhi</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>International Conference on Advance Computing and Communication (ICACC-2013), March 16&ndash;17, 2013, in Ranchi, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICACC</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Ranchi</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>8th International Conference on Information Processing and Management (ICIPM2013), April 1&ndash;3 2013, Seoul, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICIPM</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Seoul</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>9th International Conference on Computing and Advanced Information Management (ICAM), June 18&ndash;20, 2013, Jeju Island, Seoul, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICAM</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>5th International Conference on Data Mining and Intelligent Information Technology Applications (ICMIA 2013), May 29&ndash;31, 2013, Macao, China</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICMIA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Macao</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>2013 International Conference on Advanced ICT for Education (ICAICTE &ndash; 2013), Sanya, China</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICAICTE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">China</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>8th International Conference on Computing and Convergence Technology (ICCIT 2013), Oct 14&ndash;16 2013, Gyeongju, Korea</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Korea</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>2013 International Conference on Cyber Science and Engineering (CyberSE 2013), November 16 &amp; 17, 2013, China</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">CyberSE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">China</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>International Conference on Computer Science and Information Technologies (ICCSAIT 2014), during August 22&ndash;24, 2014, Bangalore, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCSAIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Bangalore</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div>
+        <h3>The 2017 International Conference on Advanced Technologies Enhancing Education (ICAT2E2017), to be held on March 18&ndash;20, 2017 in Qingdao, China</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICAT2E</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">China 2017</span>
+        </div>
+      </div>
+
+      <!-- === SCIENTIFIC COMMITTEE MEMBERS === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Scientific Committee Member</div>
+        <h3>1st International Conference on Computer Science, Computer Engineering and Information Technology (CSCSCIT2014), Tbilisi, Georgia, August 6&ndash;8, 2014</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">CSCSIT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Georgia</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Scientific Committee Member</div>
+        <h3>ICCIT 2014: International Conference on Communications, Control and Information Technology, Singapore, in September 11&ndash;12, 2014</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCIT 2014</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Singapore</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Scientific Committee Member</div>
+        <h3>ICECC 2014: International Conference on Electrical, Electronics, Instrumentation and Computer Communication, Chennai, held during September, 2014</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICECC</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Chennai</span>
+        </div>
+      </div>
+
+      <!-- === ORGANIZING COMMITTEE === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Organizing Committee Member</div>
+        <h3>ICCNT 2014: International Conference on Computational and Network Technologies, held in Bali Island, Indonesia, 2014</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCNT</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Indonesia</span>
+        </div>
+      </div>
+
+      <!-- === TECHNICAL COMMITTEE === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Committee Member</div>
+        <h3>ICCS 2015: Global Premier International Conference on Cryptography and Security 2015, to be held on November 26&ndash;27 2015 at Kuala Lumpur, Malaysia</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICCS</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Malaysia</span>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Technical Committee Member</div>
+        <h3>ICBSECE 2016: International Conference on Systems, Science, Control, Communication, Engineering and Technology, to be held on 19&ndash;19 March in Karpagam Institute of Technology, Tamil Nadu, India</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICBSECE</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Tamil Nadu</span>
+        </div>
+      </div>
+
+      <!-- === PROGRAMME COMMITTEE === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Programme Committee Member</div>
+        <h3>International Conference on Advanced Technologies Enhancing Education (ICAT2E2017), which will be held on March 18&ndash;20, 2017, Qingdao, China</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICAT2E</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">China</span>
+        </div>
+      </div>
+
+      <!-- === ADVISORY BOARD === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Advisory Board Member</div>
+        <h3>International Conference on Recent Innovative Trends in Computer Science and Technology (ICRITCSA-2016), organized by Department of Computer Applications, Department of ISE and Department of CSE, M S RAMAIAH INSTITUTE OF TECHNOLOGY, BANGALORE</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ICRITCSA</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Bangalore</span>
+        </div>
+      </div>
+
+      <!-- === INTERNATIONAL ADVISORY BOARD === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">International Advisory Board Member</div>
+        <h3>4th GLOBAL CONFERENCE ON COMPUTER SCIENCE, SOFTWARE, NETWORKS AND ENGINEERING, Izmir, Ephesus, Turkey, to be held on 03&ndash;05 November 2016</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">Global Conf.</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Turkey</span>
+        </div>
+      </div>
+
+      <!-- === CONFERENCE CHAIR === -->
+      <div class="rev-card">
+        <div class="rev-role"><img class="rri" src="" alt="">Conference Chair</div>
+        <h3>International Congress on Ad-Hoc Networks 2018, organized by Association of Scientists, Developers and Faculties (ASDF) &mdash; International</h3>
+        <div class="rev-pills">
+          <span class="rev-pill"><img class="rpi" src="" alt="">ASDF</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">Ad-Hoc Networks</span>
+          <span class="rev-pill"><img class="rpi" src="" alt="">2018</span>
+        </div>
+      </div>
+
+      <!-- === DUPLICATES for infinite scroll === -->
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div><h3>Journal of Computational Science &mdash; Scopus &amp; Elsevier Indexed Journal</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">Scopus</span><span class="rev-pill"><img class="rpi" src="" alt="">Elsevier</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div><h3>International Journal of Computer Science and Information Security (IJCSIS)</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">IJCSIS</span><span class="rev-pill"><img class="rpi" src="" alt="">InfoSec</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div><h3>IEEE/ACM Transactions on Networking &mdash; Premier Research Journal</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">IEEE</span><span class="rev-pill"><img class="rpi" src="" alt="">ACM</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div><h3>International Journal of Advanced Research in Computer Science (IJARCS)</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">IJARCS</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Technical Review Member</div><h3>Journal of Information Security and Applications &mdash; Elsevier Publication</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">Elsevier</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Program Committee Member</div><h3>World Congress on Computing and Communication Technologies (WCCCT &ndash; 2014)</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">WCCCT</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Scientific Committee Member</div><h3>ICCIT 2014: International Conference on Communications, Control and Information Technology, Singapore</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">ICCIT</span><span class="rev-pill"><img class="rpi" src="" alt="">Singapore</span></div></div>
+      <div class="rev-card"><div class="rev-role"><img class="rri" src="" alt="">Conference Chair</div><h3>International Congress on Ad-Hoc Networks 2018 &mdash; ASDF International</h3><div class="rev-pills"><span class="rev-pill"><img class="rpi" src="" alt="">ASDF</span><span class="rev-pill"><img class="rpi" src="" alt="">2018</span></div></div>
+
+    </div>
+  </div>
+</div>
+<!-- FOOTER: replace fc-ico src="" with location/email/web icons -->
+<footer id="contact">
+  <div class="foot-grid">
+   
+    <div class="footer-brand">
+  <a href="#hero" class="logo">
+    <div class="logo-av">DR</div>
+    <div class="logo-txt">
+      <b style="display:block;font-size:13px;font-weight:600;color:#ffffff">Mohammed Ali Hussain</b>
+      <span style="display:block;font-size:10.5px;color:var(--gold);font-weight:500;letter-spacing:.6px">Professor · Ph.D CS&amp;E</span>
+    </div>
+  </a>
+  <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;max-width:270px;margin-top:13px">
+    Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. He has more than 17 years of teaching experience in India and Abroad.
+  </p>
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 16px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);text-decoration:none;transition:.22s;"
+     onmouseover="this.style.background='rgba(0,119,181,.25)';this.style.borderColor='rgba(0,119,181,.55)'"
+     onmouseout="this.style.background='rgba(255,255,255,.07)';this.style.borderColor='rgba(255,255,255,.13)'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    <span style="font-size:12px;color:rgba(255,255,255,.65);font-weight:500;letter-spacing:.4px">LinkedIn Profile</span>
+  </a>
+</div>
+    <div>
+      <div class="foot-h">Achievements</div>
+      <ul class="foot-ul">
+        <li><a href="#">Bharath Shiksha Award '18</a></li>
+        <li><a href="#">Indian Status Award '18</a></li>
+        <li><a href="#">Mahatma Gandhi Award '18</a></li>
+        <li><a href="#">Best Teacher Award '17</a></li>
+        <li><a href="#">Rashtriya Gaurav Award '17</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">Contact Info</div>
+      <div class="foot-contact">
+        <div class="fc-row">
+          <img class="fc-ico" src="{{ url_for('static', filename='images//icons/location.png') }}" alt="location">
+          <div><div class="fc-lbl">Location</div><div class="fc-val">Vijayawada, Andhra Pradesh, India</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="{{ url_for('static', filename='images//icons/email.png') }}" alt="email">
+          <div><div class="fc-lbl">Email</div><div class="fc-val">alihussain.phd@gmail.com</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="{{ url_for('static', filename='images//icons/website.png') }}" alt="website">
+          <div><div class="fc-lbl">Website</div><div class="fc-val">www.dralihuissain.in</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <p>&copy; 2024 Dr. Mohammed Ali Hussain &mdash; All Rights Reserved.</p>
+   <!-- <p style="color:rgba(201,151,42,.4);font-size:11px;letter-spacing:1.5px">DESIGNED WITH EXCELLENCE</p>-->
+  </div>
+</footer>
+
+<script>
+/* NAV */
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  navEl.classList.toggle('scrolled',window.scrollY>40);
+  let cur='hero';
+  document.querySelectorAll('[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id});
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+function openMob(){
+  document.getElementById('mobNav').classList.add('open');
+  document.querySelector('.ham').style.display='none';
+  document.body.style.overflow='hidden';
+}
+function closeMob(){
+  document.getElementById('mobNav').classList.remove('open');
+  document.querySelector('.ham').style.display='flex';
+  document.body.style.overflow='';
+}
+// Close on ESC key
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMob()});
+// Close when clicking outside the links area
+document.getElementById('mobNav').addEventListener('click',function(e){
+  if(e.target===this)closeMob();
+});
+
+/* HERO SLIDER */
+let cur=0,total=4,sTimer,rafId,pct=0;
+const DUR=5500;
+function goSlide(n){
+  clearInterval(sTimer);cancelAnimationFrame(rafId);
+  document.getElementById('s'+cur).classList.remove('on');
+  document.querySelectorAll('.dot')[cur].classList.remove('on');
+  cur=((n%total)+total)%total;
+  document.getElementById('s'+cur).classList.add('on');
+  document.querySelectorAll('.dot')[cur].classList.add('on');
+  pct=0;runProg();autoSlide();
+}
+function nextSlide(){goSlide(cur+1)}
+function prevSlide(){goSlide(cur-1)}
+function runProg(){
+  const bar=document.getElementById('pBar');let t0=null;
+  function step(ts){if(!t0)t0=ts;pct=Math.min((ts-t0)/DUR*100,100);bar.style.width=pct+'%';if(pct<100)rafId=requestAnimationFrame(step);}
+  rafId=requestAnimationFrame(step);
+}
+function autoSlide(){sTimer=setInterval(()=>goSlide(cur+1),DUR)}
+runProg();autoSlide();
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')nextSlide();if(e.key==='ArrowLeft')prevSlide();});
+let tx=0;
+document.querySelector('.hero').addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+document.querySelector('.hero').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>48){dx<0?nextSlide():prevSlide();}},{passive:true});
+
+/* HERO ENTRANCE */
+window.addEventListener('load',()=>{
+  document.querySelectorAll('#heroText > *').forEach((el,i)=>{
+    el.style.opacity='0';el.style.transform='translateY(20px)';
+    el.style.transition='opacity .65s ease '+(i*.13)+'s,transform .65s ease '+(i*.13)+'s';
+    setTimeout(()=>{el.style.opacity='1';el.style.transform='translateY(0)'},120+i*110);
+  });
+  /* Make arrow imgs white on hover via JS since CSS :hover can't re-filter child img in all browsers */
+  document.querySelectorAll('.s-arr').forEach(btn=>{
+    const img=btn.querySelector('.arr-img');
+    if(!img)return;
+    btn.addEventListener('mouseenter',()=>{ img.style.filter='brightness(0) invert(1)'; });
+    btn.addEventListener('mouseleave',()=>{ img.style.filter=''; });
+  });
+});
+
+/* SCROLL FADE REVEAL */
+const fadeObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');fadeObs.unobserve(e.target);}});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up,.fade-left,.fade-right').forEach(el=>fadeObs.observe(el));
+
+/* COUNTERS */
+function animCount(el,target,ms=1600){
+  let s=null;
+  const tick=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/ms,1);el.textContent=Math.round((1-Math.pow(1-p,3))*target);if(p<1)requestAnimationFrame(tick);else el.textContent=target;};
+  requestAnimationFrame(tick);
+}
+const cntObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animCount(e.target,+e.target.dataset.count);cntObs.unobserve(e.target);}});
+},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el=>cntObs.observe(el));
+
+
+
+/* AUTO-SCROLL + DRAG/TOUCH for all carousels */
+const carousels = [
+  { id: 'pubTrack',  speed: 0.6 },
+  { id: 'wsTrack',   speed: 0.5 },
+  { id: 'achTrack',  speed: 0.4 },
+  { id: 'revTrack',  speed: 0.7 },
+];
+
+carousels.forEach(({ id, speed }) => {
+  const track = document.getElementById(id);
+  if (!track) return;
+
+  let paused = false;
+  let isDown = false;
+  let startX, startScrollLeft;
+  let touchStartX, touchStartScrollLeft;
+
+  // Auto scroll via requestAnimationFrame
+  function autoScroll() {
+    if (!paused && !isDown) {
+      track.scrollLeft += speed;
+      // Seamless loop — when halfway, reset to start
+      if (track.scrollLeft >= track.scrollWidth / 2) {
+        track.scrollLeft = 0;
+      }
+    }
+    requestAnimationFrame(autoScroll);
+  }
+  requestAnimationFrame(autoScroll);
+
+  // Resume after user lets go
+  let resumeTimer;
+  function pauseScroll() {
+    paused = true;
+    clearTimeout(resumeTimer);
+  }
+  function resumeScroll() {
+    resumeTimer = setTimeout(() => { paused = false; }, 1200);
+  }
+
+  // Mouse drag
+  track.addEventListener('mousedown', e => {
+    isDown = true;
+    paused = true;
+    startX = e.pageX;
+    startScrollLeft = track.scrollLeft;
+    track.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDown) return;
+    isDown = false;
+    track.style.cursor = 'grab';
+    resumeScroll();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    const dx = e.pageX - startX;
+    track.scrollLeft = startScrollLeft - dx;
+    // Seamless loop while dragging
+    if (track.scrollLeft >= track.scrollWidth / 2) track.scrollLeft -= track.scrollWidth / 2;
+    if (track.scrollLeft < 0) track.scrollLeft += track.scrollWidth / 2;
+  });
+
+  // Touch swipe
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].pageX;
+    touchStartScrollLeft = track.scrollLeft;
+    pauseScroll();
+  }, { passive: true });
+  track.addEventListener('touchend', () => {
+    resumeScroll();
+  }, { passive: true });
+  track.addEventListener('touchmove', e => {
+    const dx = e.touches[0].pageX - touchStartX;
+    track.scrollLeft = touchStartScrollLeft - dx;
+    if (track.scrollLeft >= track.scrollWidth / 2) track.scrollLeft -= track.scrollWidth / 2;
+    if (track.scrollLeft < 0) track.scrollLeft += track.scrollWidth / 2;
+  }, { passive: true });
+
+  // Set grab cursor
+  track.style.cursor = 'grab';
+});
+</script>
+</body>
+</html>

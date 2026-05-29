@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Dr. Mohammed Ali Hussain</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="{{ url_for('index') }}" class="logo">
+    <div class="logo-av">MA</div>
+    <div class="logo-txt"><b>Mohammed Ali Hussain</b><span>Professor · Ph.D CS&amp;E</span></div>
+  </a>
+ <ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" >Home</a></li>
+    <li><a href="{{ url_for('about') }}" >About</a></li>
+    <li><a href="{{ url_for('publications') }}">Publications</a></li>
+    <li><a href="{{ url_for('gallery') }}" class="on">Gallery</a></li>
+      <li><a href="{{ url_for('downloads_index') }}">pdfs</a></li>
+    <li><a href="{{ url_for('contact') }}" >Contact</a></li>
+  </ul>
+  <div class="ham" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-x" onclick="closeMob()" aria-label="Close menu">&#10005;</button>
+  <a href="{{ url_for('index') }}" onclick="closeMob()">Home</a>
+  <a href="{{ url_for('about') }}" onclick="closeMob()">About</a>
+  <a href="{{ url_for('publications') }}" onclick="closeMob()">Publications</a>
+  <a href="{{ url_for('downloads_index') }}" onclick="closeMob()">pdfs</a>
+  <a href="{{ url_for('contact') }}"  onclick="closeMob()">Contact</a>
+</div>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="banner-eyebrow"><span class="banner-line"></span>Moments · Milestones · Memories<span class="banner-line"></span></div>
+    <h1><i>Photo</i> Gallery</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Gallery</span>
+    </div>
+  </div>
+  <div class="banner-deco">GLR</div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-page">
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar fade-up">
+    <span class="filter-label">Filter:</span>
+    <button class="f-btn on" data-cat="all">All</button>
+    <button class="f-btn" data-cat="awards">Awards</button>
+    <button class="f-btn" data-cat="conferences">Conferences</button>
+    <button class="f-btn" data-cat="travel">International Travel</button>
+    <button class="f-btn" data-cat="academic">Academic</button>
+    <button class="f-btn" data-cat="events">Events</button>
+    <span class="gallery-count">Showing <b id="visCount">25</b> photos</span>
+  </div>
+
+  <!-- MASONRY GRID -->
+  <div class="masonry" id="masonryGrid">
+
+    <div class="m-item fade-up" data-cat="awards" data-index="0" data-title="IEEE International Journal — Engineering & Management Research Award" data-cat-label="Awards">
+      <img src="../images/ieeInteng.jpg" alt="IEEE International Journal Engineering and Management Research Award">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">IEEE International Journal — Engineering &amp; Management Research</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="travel" data-index="1" data-title="Burj Khalifa, Dubai — International Visit" data-cat-label="International Travel">
+      <img src="../images/gallery-02.jpg" alt="Burj Khalifa Dubai International Visit">
+      <div class="overlay">
+        <div class="overlay-cat">International Travel</div>
+        <div class="overlay-title">Burj Khalifa, Dubai — International Visit</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="travel" data-index="2" data-title="Atlantis Hotel, Dubai — Researcher of the Year 2019" data-cat-label="International Travel">
+      <img src="../images/gallery-03.jpg" alt="Atlantis Hotel Dubai Researcher of the Year 2019">
+      <div class="overlay">
+        <div class="overlay-cat">International Travel</div>
+        <div class="overlay-title">Atlantis Hotel, Dubai — Researcher of the Year 2019</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="conferences" data-index="3" data-title="Conference Presentation — Keynote Address" data-cat-label="Conferences">
+      <img src="../images/gallery-04.jpg" alt="Conference Presentation Keynote Address">
+      <div class="overlay">
+        <div class="overlay-cat">Conferences</div>
+        <div class="overlay-title">Conference Presentation — Keynote Address</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="travel" data-index="4" data-title="Museum of the Future, Dubai" data-cat-label="International Travel">
+      <img src="../images/gallery-05.jpg" alt="Museum of the Future Dubai UAE">
+      <div class="overlay">
+        <div class="overlay-cat">International Travel</div>
+        <div class="overlay-title">Museum of the Future, Dubai</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="academic" data-index="5" data-title="Acharya Nagarjuna University — XXXIII & XXXIV Convocation" data-cat-label="Academic">
+      <img src="../images/gallery-06.jpg" alt="Acharya Nagarjuna University XXXIII and XXXIV Convocation">
+      <div class="overlay">
+        <div class="overlay-cat">Academic</div>
+        <div class="overlay-title">Acharya Nagarjuna University — XXXIII &amp; XXXIV Convocation</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="events" data-index="6" data-title="Group Photo — Research Team & Scholars" data-cat-label="Events">
+      <img src="../images/gallery-07.jpg" alt="Group Photo Research Team and Scholars">
+      <div class="overlay">
+        <div class="overlay-cat">Events</div>
+        <div class="overlay-title">Group Photo — Research Team &amp; Scholars</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="awards" data-index="7" data-title="Global Excellence Awards 2017 — Global Green Ambassador Summit" data-cat-label="Awards">
+      <img src="../images/gallery-08.jpg" alt="Global Excellence Awards 2017 Global Green Ambassador Summit">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">Global Excellence Awards 2017 — Global Green Ambassador Summit</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="awards" data-index="8" data-title="Award Ceremony — Forum of India" data-cat-label="Awards">
+      <img src="../images/gallery-09.jpg" alt="Award Ceremony Forum of India">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">Award Ceremony — Forum of India</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="conferences" data-index="9" data-title="ICTIDS 2019 — Kuala Lumpur, Malaysia" data-cat-label="Conferences">
+      <img src="../images/gallery-10.jpg" alt="Petronas Twin Towers ICTIDS 2019 Kuala Lumpur Malaysia">
+      <div class="overlay">
+        <div class="overlay-cat">Conferences</div>
+        <div class="overlay-title">ICTIDS 2019 — Kuala Lumpur, Malaysia</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="awards" data-index="10" data-title="Research Excellence Award Ceremony" data-cat-label="Awards">
+      <img src="../images/gallery-11.jpg" alt="Research Excellence Award Ceremony">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">Research Excellence Award Ceremony</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="academic" data-index="11" data-title="India–America Education Summit 2016, Hyderabad" data-cat-label="Academic">
+      <img src="../images/gallery-12.jpg" alt="India America Education Summit 2016 Hyderabad">
+      <div class="overlay">
+        <div class="overlay-cat">Academic</div>
+        <div class="overlay-title">India–America Education Summit 2016, Hyderabad</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="events" data-index="12" data-title="Award Presentation — Red Carpet Ceremony" data-cat-label="Events">
+      <img src="../images/gallery-13.jpg" alt="Award Presentation Red Carpet Ceremony">
+      <div class="overlay">
+        <div class="overlay-cat">Events</div>
+        <div class="overlay-title">Award Presentation — Red Carpet Ceremony</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="conferences" data-index="13" data-title="ICIES — International Conference, Keynote Session" data-cat-label="Conferences">
+      <img src="../images/gallery-14.jpg" alt="ICIES International Conference Keynote Session">
+      <div class="overlay">
+        <div class="overlay-cat">Conferences</div>
+        <div class="overlay-title">ICIES — International Conference, Keynote Session</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="awards" data-index="14" data-title="ASDF Global Awards — Best Computer Science Faculty" data-cat-label="Awards">
+      <img src="../images/ASDF2.jpg" alt="ASDF Global Awards Best Computer Science Faculty">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">ASDF Global Awards — Best Computer Science Faculty</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="academic" data-index="15" data-title="Award from Governor — Constitution Club of India, New Delhi" data-cat-label="Academic">
+      <img src="../images/gallery-16.jpg" alt="Award from Governor Constitution Club of India New Delhi">
+      <div class="overlay">
+        <div class="overlay-cat">Academic</div>
+        <div class="overlay-title">Award from Governor — Constitution Club of India, New Delhi</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="events" data-index="16" data-title="KL University — Best Teacher Award Ceremony" data-cat-label="Events">
+      <img src="../images/gallery-17.jpg" alt="KL University Best Teacher Award Ceremony">
+      <div class="overlay">
+        <div class="overlay-cat">Events</div>
+        <div class="overlay-title">KL University — Best Teacher Award Ceremony</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="conferences" data-index="17" data-title="Conference Workshop — Hands-on Session" data-cat-label="Conferences">
+      <img src="../images/gallery-18.jpg" alt="Conference Workshop Hands-on Session">
+      <div class="overlay">
+        <div class="overlay-cat">Conferences</div>
+        <div class="overlay-title">Conference Workshop — Hands-on Session</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="awards" data-index="18" data-title="ASDF Global Awards 2012 — Pondicherry" data-cat-label="Awards">
+      <img src="../images/ASDF1.jpg" alt="ASDF Global Awards 2012 Pondicherry">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">ASDF Global Awards 2012 — Pondicherry</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="events" data-index="19" data-title="Faculty Recognition — Research Community" data-cat-label="Events">
+      <img src="../images/gallery-20.jpg" alt="Faculty Recognition Research Community">
+      <div class="overlay">
+        <div class="overlay-cat">Events</div>
+        <div class="overlay-title">Faculty Recognition — Research Community</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="academic" data-index="20" data-title="Classroom Session — KL University" data-cat-label="Academic">
+      <img src="../images/gallery-21.jpg" alt="Classroom Session KL University">
+      <div class="overlay">
+        <div class="overlay-cat">Academic</div>
+        <div class="overlay-title">Classroom Session — KL University</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="travel" data-index="21" data-title="International Campus Visit — LUC, Malaysia" data-cat-label="International Travel">
+      <img src="../images/gallery-22.jpg" alt="International Campus Visit LUC Malaysia">
+      <div class="overlay">
+        <div class="overlay-cat">International Travel</div>
+        <div class="overlay-title">International Campus Visit — LUC, Malaysia</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="2" data-cat="awards" data-index="22" data-title="Mahatma Gandhi Award — India International Center, New Delhi" data-cat-label="Awards">
+      <img src="../images/mahaint.jpg" alt="Mahatma Gandhi Award India International Center New Delhi">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">Mahatma Gandhi Award — India International Center, New Delhi</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-cat="events" data-index="23" data-title="International Flags — Research & Academic Exchange" data-cat-label="Events">
+      <img src="../images/gallery-24.jpg" alt="International Flags Research and Academic Exchange">
+      <div class="overlay">
+        <div class="overlay-cat">Events</div>
+        <div class="overlay-title">International Flags — Research &amp; Academic Exchange</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+    <div class="m-item fade-up" data-d="1" data-cat="awards" data-index="24" data-title="Rashtriya Gaurav Award — India International Friendship Society, New Delhi" data-cat-label="Awards">
+      <img src="t.jpg" alt="Rashtriya Gaurav Award India International Friendship Society New Delhi">
+      <div class="overlay">
+        <div class="overlay-cat">Awards</div>
+        <div class="overlay-title">Rashtriya Gaurav Award — India International Friendship Society, New Delhi</div>
+        <div class="overlay-zoom">🔍</div>
+      </div>
+    </div>
+
+  </div><!-- /masonry -->
+
+</div><!-- /gallery-page -->
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="closeLb()" aria-label="Close">&#10005;</button>
+    <button class="lb-nav lb-prev" onclick="navLb(-1)" aria-label="Previous">&#8249;</button>
+    <button class="lb-nav lb-next" onclick="navLb(1)" aria-label="Next">&#8250;</button>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="" style="display:none">
+    </div>
+    <div class="lb-caption">
+      <div class="lc-cat" id="lbCat"></div>
+      <div class="lc-title" id="lbTitle"></div>
+    </div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="foot-grid">
+   
+    <div class="footer-brand">
+  <a href="../index.html" class="logo">
+    <div class="logo-av">DR</div>
+    <div class="logo-txt">
+      <b style="display:block;font-size:13px;font-weight:600;color:#ffffff">Mohammed Ali Hussain</b>
+      <span style="display:block;font-size:10.5px;color:var(--gold);font-weight:500;letter-spacing:.6px">Professor · Ph.D CS&amp;E</span>
+    </div>
+  </a>
+  <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;max-width:270px;margin-top:13px">
+    Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. He has more than 17 years of teaching experience in India and Abroad.
+  </p>
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 16px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);text-decoration:none;transition:.22s;"
+     onmouseover="this.style.background='rgba(0,119,181,.25)';this.style.borderColor='rgba(0,119,181,.55)'"
+     onmouseout="this.style.background='rgba(255,255,255,.07)';this.style.borderColor='rgba(255,255,255,.13)'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    <span style="font-size:12px;color:rgba(255,255,255,.65);font-weight:500;letter-spacing:.4px">LinkedIn Profile</span>
+  </a>
+</div>
+    <div>
+      <div class="foot-h">Achievements</div>
+      <ul class="foot-ul">
+        <li><a href="#">Bharath Shiksha Award '18</a></li>
+        <li><a href="#">Indian Status Award '18</a></li>
+        <li><a href="#">Mahatma Gandhi Award '18</a></li>
+        <li><a href="#">Best Teacher Award '17</a></li>
+        <li><a href="#">Rashtriya Gaurav Award '17</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">Contact Info</div>
+      <div class="foot-contact">
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/location.png" alt="location">
+          <div><div class="fc-lbl">Location</div><div class="fc-val">Vijayawada, Andhra Pradesh, India</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/email.png" alt="email">
+          <div><div class="fc-lbl">Email</div><div class="fc-val">alihussain.phd@gmail.com</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/website.png" alt="website">
+          <div><div class="fc-lbl">Website</div><div class="fc-val">www.dralihuissain.in</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <p>&copy; 2024 Dr. Mohammed Ali Hussain &mdash; All Rights Reserved.</p>
+   <!-- <p style="color:rgba(201,151,42,.4);font-size:11px;letter-spacing:1.5px">DESIGNED WITH EXCELLENCE</p>-->
+  </div>
+</footer>
+
+<script>
+/* ── NAV ── */
+const navEl = document.getElementById('nav');
+window.addEventListener('scroll', () => { navEl.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+function openMob() {
+  document.getElementById('mobNav').classList.add('open');
+  document.querySelector('.ham').style.display = 'none';
+  document.body.style.overflow = 'hidden';
+}
+function closeMob() {
+  document.getElementById('mobNav').classList.remove('open');
+  document.querySelector('.ham').style.display = 'flex';
+  document.body.style.overflow = '';
+}
+
+// Close on ESC key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('lb').classList.contains('on') === false) closeMob();
+});
+
+// Close when clicking outside the links area
+document.getElementById('mobNav').addEventListener('click', function(e) {
+  if (e.target === this) closeMob();
+});
+/* ── FADE REVEAL ── */
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); fadeObs.unobserve(e.target); } });
+}, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+
+/* ── BANNER ENTRANCE ── */
+window.addEventListener('load', () => {
+  document.querySelectorAll('.page-banner .banner-eyebrow, .page-banner h1, .page-banner .breadcrumb').forEach((el, i) => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
+    el.style.transition = `opacity .6s ease ${i*.14}s, transform .6s ease ${i*.14}s`;
+    setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 80 + i * 120);
+  });
+});
+
+/* ── FILTER ── */
+const items = Array.from(document.querySelectorAll('.m-item'));
+const countEl = document.getElementById('visCount');
+
+document.querySelectorAll('.f-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    const cat = btn.dataset.cat;
+    let shown = 0;
+    items.forEach(item => {
+      const match = cat === 'all' || item.dataset.cat === cat;
+      item.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    countEl.textContent = shown;
+    items.forEach(item => {
+      if (item.style.display !== 'none') {
+        item.classList.remove('vis');
+        void item.offsetWidth;
+        setTimeout(() => item.classList.add('vis'), 50);
+      }
+    });
+  });
+});
+
+/* ── LIGHTBOX ── */
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lbImg');
+let lbIndex = 0;
+let lbVisible = [];
+
+function updateLbVisible() {
+  const activeBtn = document.querySelector('.f-btn.on');
+  const cat = activeBtn ? activeBtn.dataset.cat : 'all';
+  lbVisible = items.filter(item => cat === 'all' || item.dataset.cat === cat);
+}
+
+function openLb(idx) {
+  updateLbVisible();
+  lbIndex = idx;
+  showLbSlide();
+  lb.classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLbSlide() {
+  const item = lbVisible[lbIndex];
+  if (!item) return;
+  const src = item.querySelector('img') ? item.querySelector('img').src : '';
+  const alt = item.querySelector('img') ? item.querySelector('img').alt : '';
+  lbImg.src = src;
+  lbImg.alt = alt;
+  lbImg.style.display = 'block';
+  document.getElementById('lbTitle').textContent = item.dataset.title || '';
+  document.getElementById('lbCat').textContent = item.dataset.catLabel || item.dataset.cat || '';
+  document.getElementById('lbCounter').textContent = `${lbIndex + 1} / ${lbVisible.length}`;
+}
+
+function navLb(dir) {
+  lbIndex = ((lbIndex + dir) + lbVisible.length) % lbVisible.length;
+  showLbSlide();
+}
+
+function closeLb() {
+  lb.classList.remove('on');
+  document.body.style.overflow = '';
+}
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    updateLbVisible();
+    const visIdx = lbVisible.indexOf(item);
+    openLb(visIdx >= 0 ? visIdx : 0);
+  });
+});
+
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('on')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowRight') navLb(1);
+  if (e.key === 'ArrowLeft') navLb(-1);
+});
+
+/* ── TOUCH SWIPE ── */
+let lbTx = 0;
+lb.addEventListener('touchstart', e => { lbTx = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - lbTx; if (Math.abs(dx) > 50) navLb(dx < 0 ? 1 : -1); }, { passive: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloads — Dr. Mohammed Ali Hussain</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --gold:#c9972a;--gold2:#e2b84a;--gold3:#fdf0d0;
+  --navy:#0d1b35;--navy2:#162444;--navy3:#1e3160;
+  --white:#ffffff;--off:#f9f8f5;--soft:#f3f1eb;
+  --border:#e6e2d8;--text:#181825;--mid:#585870;--muted:#9898b0;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--soft)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+/* =========================
+   GLOBAL
+========================= */
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --gold:#c9972a;
+  --gold2:#e2b84a;
+  --navy:#0d1b35;
+  --navy3:#1e3160;
+  --white:#ffffff;
+  --soft:#f3f1eb;
+  --border:#e6e2d8;
+  --mid:#585870;
+}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+}
+#nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:998;
+  height:66px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 5%;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s, box-shadow .3s;
+}
+
+#nav.scrolled{
+  border-color:var(--border);
+  box-shadow:0 2px 24px rgba(0,0,0,.07);
+}
+
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+.logo-av{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--navy),var(--navy3));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+  flex-shrink:0;
+  overflow:hidden;
+}
+
+.logo-av img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.logo-txt b{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:var(--navy);
+}
+
+.logo-txt span{
+  display:block;
+  font-size:10.5px;
+  color:var(--gold);
+  font-weight:500;
+  letter-spacing:.6px;
+}
+
+/* DESKTOP NAV LINKS */
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:0;
+}
+
+.nav-links a{
+  display:block;
+  padding:6px 12px;
+  font-size:11.5px;
+  font-weight:500;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--mid);
+  border-radius:5px;
+  transition:.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.on{
+  color:var(--navy);
+  background:var(--soft);
+}
+
+/* HAMBURGER */
+.ham{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  padding:5px;
+  background:none;
+  border:none;
+}
+
+.ham span{
+  display:block;
+  width:20px;
+  height:1.5px;
+  background:var(--navy);
+  border-radius:2px;
+  transition:.3s;
+}
+
+/* MOBILE NAV */
+.mob-nav{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:#ffffff;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+}
+
+.mob-nav.open{
+  display:flex;
+}
+
+.mob-nav a{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  color:var(--navy);
+  text-decoration:none;
+  padding:14px 0;
+  width:55%;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+  transition:.2s;
+}
+
+.mob-nav a:hover{
+  color:var(--gold);
+}
+
+/* CLOSE BUTTON */
+.mob-x{
+  position:absolute;
+  top:20px;
+  right:22px;
+  background:none;
+  border:none;
+  font-size:28px;
+  cursor:pointer;
+  color:var(--navy);
+  z-index:1001;
+  line-height:1;
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  transition:.2s;
+}
+
+.mob-x:hover{
+  background:var(--soft);
+  color:var(--gold);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+  }
+
+  .ham{
+    display:flex;
+  }
+}
+
+/* HERO BANNER */
+.dl-hero{background:var(--navy);padding:64px 5% 52px;position:relative;overflow:hidden}
+.dl-hero::after{content:'';position:absolute;right:-60px;top:-60px;width:340px;height:340px;border-radius:50%;background:rgba(201,151,42,.06);pointer-events:none}
+.dl-hero::before{content:'';position:absolute;left:40%;bottom:-40px;width:220px;height:220px;border-radius:50%;background:rgba(30,49,96,.6);pointer-events:none}
+.hero-tag{font-size:10.5px;letter-spacing:2.8px;text-transform:uppercase;color:rgba(201,151,42,.8);font-weight:600;display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.hero-tag-bar{width:26px;height:1.5px;background:var(--gold2)}
+.dl-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.5vw,54px);color:#fff;font-weight:700;line-height:1.08;margin-bottom:12px;position:relative;z-index:1}
+.dl-hero h1 i{color:var(--gold2);font-style:italic}
+.dl-hero p{font-size:15px;color:rgba(255,255,255,.45);max-width:500px;line-height:1.75;position:relative;z-index:1}
+.hero-stats{display:flex;gap:36px;margin-top:32px;flex-wrap:wrap}
+.h-stat{text-align:center}
+.h-stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--gold2);line-height:1}
+.h-stat span{font-size:10.5px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1.2px}
+
+/* ALERTS */
+.alerts{padding:0 5%;max-width:1280px;margin:0 auto}
+.alert{padding:11px 16px;border-radius:7px;font-size:13px;margin-top:14px;display:flex;align-items:center;gap:8px}
+.alert-success{background:#edf7ed;color:#256025;border:1px solid #b7dfb7}
+.alert-error{background:#fdf0f0;color:#8b2020;border:1px solid #f0b8b8}
+
+/* SEARCH + FILTERS */
+.filters{padding:32px 5% 0;max-width:1280px;margin:0 auto}
+.filter-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.search-box{flex:1;min-width:220px;position:relative}
+.search-box input{width:100%;padding:11px 16px 11px 42px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13.5px;color:var(--text);background:var(--white);transition:.2s;outline:none}
+.search-box input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,151,42,.1)}
+.search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.filter-cats{display:flex;gap:8px;flex-wrap:wrap}
+.cat-pill{padding:7px 15px;border-radius:30px;font-size:12px;font-weight:500;text-decoration:none;border:1.5px solid var(--border);color:var(--mid);background:var(--white);cursor:pointer;transition:.2s;white-space:nowrap}
+.cat-pill:hover,.cat-pill.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.result-count{font-size:12px;color:var(--muted);white-space:nowrap;padding:8px 0}
+
+/* FEATURED */
+.featured-sec{padding:40px 5% 0;max-width:1280px;margin:0 auto}
+.sec-label{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.sec-label-bar{width:22px;height:1.5px;background:var(--gold)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.feat-pdf{background:linear-gradient(135deg,var(--navy),var(--navy3));border-radius:12px;padding:24px;position:relative;overflow:hidden;cursor:pointer;transition:.3s;border:1px solid rgba(201,151,42,.2)}
+.feat-pdf:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(13,27,53,.25);border-color:rgba(201,151,42,.5)}
+.feat-pdf::after{content:'★ Featured';position:absolute;top:14px;right:14px;font-size:9.5px;letter-spacing:1px;color:var(--gold2);background:rgba(201,151,42,.15);padding:3px 8px;border-radius:20px;border:1px solid rgba(201,151,42,.3)}
+.feat-pdf .pdf-icon{width:44px;height:44px;border-radius:10px;background:rgba(201,151,42,.15);border:1px solid rgba(201,151,42,.3);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px}
+.feat-pdf h3{font-family:'Cormorant Garamond',serif;font-size:17px;color:#fff;line-height:1.4;font-weight:600;margin-bottom:8px}
+.feat-pdf .feat-meta{font-size:11px;color:rgba(255,255,255,.35);margin-bottom:16px}
+.feat-pdf .dl-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:6px;background:var(--gold);color:var(--navy);font-size:11.5px;font-weight:700;text-decoration:none;letter-spacing:.4px;transition:.2s}
+.feat-pdf .dl-btn:hover{background:var(--gold2);transform:scale(1.03)}
+
+/* MAIN GRID */
+.main-content{padding:32px 5% 80px;max-width:1280px;margin:0 auto}
+.pdf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;margin-top:24px}
+.pdf-card{background:var(--off);border:1.5px solid var(--border);border-radius:12px;overflow:hidden;transition:.32s;display:flex;flex-direction:column}
+.pdf-card:hover{transform:translateY(-5px);box-shadow:0 18px 46px rgba(13,27,53,.09);border-color:rgba(201,151,42,.4)}
+.pdf-card-top{background:linear-gradient(135deg,var(--navy),var(--navy3));padding:20px 22px 16px;position:relative}
+.pdf-card-top::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),transparent)}
+.pdf-card-icon{font-size:28px;margin-bottom:8px}
+.pdf-card-cat{font-size:9.5px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(201,151,42,.8);font-weight:600}
+.pdf-card-body{padding:18px 22px;flex:1;display:flex;flex-direction:column}
+.pdf-card-body h3{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy);line-height:1.4;font-weight:700;margin-bottom:7px}
+.pdf-card-body p{font-size:12.5px;color:var(--mid);line-height:1.65;flex:1;margin-bottom:14px}
+.pdf-meta-row{display:flex;gap:12px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.pdf-meta-item{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.pdf-card-footer{padding:0 22px 18px;display:flex;justify-content:space-between;align-items:center}
+.dl-link{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:6px;background:var(--navy);color:#fff;font-size:12px;font-weight:600;text-decoration:none;letter-spacing:.5px;transition:.24s}
+.dl-link:hover{background:var(--navy3);transform:translateY(-2px);box-shadow:0 6px 18px rgba(13,27,53,.22)}
+.dl-count{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px}
+
+/* EMPTY */
+.empty-state{text-align:center;padding:70px 20px;color:var(--muted)}
+.empty-state .empty-icon{font-size:52px;margin-bottom:16px;opacity:.4}
+.empty-state h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--navy);margin-bottom:8px}
+.empty-state p{font-size:14px}
+
+/* FOOTER */
+footer{background:var(--navy);padding:70px 5% 30px;border-top:2px solid rgba(201,151,42,.25)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:56px;max-width:1200px;margin:0 auto 52px}
+.foot-brand p{font-size:13px;color:rgba(225, 1, 1, 0.42);line-height:1.8;max-width:270px;margin-top:13px}
+.foot-h{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600}
+.foot-ul{list-style:none}
+.foot-ul li{margin-bottom:9px}
+.foot-ul a{font-size:13px;color:rgba(255,255,255,.42);text-decoration:none;transition:.2s;display:flex;align-items:center;gap:7px}
+.foot-ul a::before{content:"›";color:var(--gold);font-size:14px}
+.foot-ul a:hover{color:rgba(255,255,255,.78)}
+.foot-contact{display:flex;flex-direction:column;gap:14px}
+.fc-row{display:flex;align-items:flex-start;gap:10px}
+.fc-ico{width:18px;height:18px;object-fit:contain;flex-shrink:0;display:block;margin-top:2px;opacity:1}
+.fc-lbl{font-size:10px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.fc-val{font-size:13px;color:rgba(255,255,255,.48);line-height:1.4}
+.foot-bot{max-width:1200px;margin:0 auto;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-bot p{font-size:12px;color:rgba(255,255,255,.22)}
+
+@media(max-width:600px){.filter-row{flex-direction:column}.hero-stats{gap:22px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="{{ url_for('index') }}" class="logo">
+    <div class="logo-av">MA</div>
+    <div class="logo-txt"><b>Mohammed Ali Hussain</b><span>Professor · Ph.D CS&amp;E</span></div>
+  </a>
+ <ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" >Home</a></li>
+    <li><a href="{{ url_for('about') }}" >About</a></li>
+    <li><a href="{{ url_for('publications') }}">Publications</a></li>
+    <li><a href="{{ url_for('gallery') }}" >Gallery</a></li>
+      <li><a href="{{ url_for('downloads_index') }}" class="on">pdfs</a></li>
+    <li><a href="{{ url_for('contact') }}" >Contact</a></li>
+  </ul>
+  <div class="ham" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-x" onclick="closeMob()" aria-label="Close menu">&#10005;</button>
+  <a href="{{ url_for('index') }}" onclick="closeMob()">Home</a>
+  <a href="{{ url_for('about') }}" onclick="closeMob()">About</a>
+  <a href="{{ url_for('publications') }}" onclick="closeMob()">Publications</a>
+  <a href="{{ url_for('downloads_index') }}" onclick="closeMob()">pdfs</a>
+  <a href="{{ url_for('contact') }}"  onclick="closeMob()">Contact</a>
+</div>
+
+
+<!-- Hero -->
+<div class="dl-hero">
+  <div class="hero-tag"><span class="hero-tag-bar"></span>Resource Centre</div>
+  <h1>Research <i>Downloads</i></h1>
+  <p>Access publications, research papers, lecture notes and academic resources by Dr. Mohammed Ali Hussain.</p>
+  <div class="hero-stats">
+    <div class="h-stat"><b>{{ pdfs|length }}</b><span>Documents</span></div>
+    <div class="h-stat"><b>{{ pdfs|sum(attribute='downloads') }}</b><span>Total Downloads</span></div>
+    <div class="h-stat"><b>{{ categories|length }}</b><span>Categories</span></div>
+  </div>
+</div>
+
+<!-- Flash messages -->
+<div class="alerts">
+  {% for cat, msg in get_flashed_messages(with_categories=True) %}
+  <div class="alert alert-{{ cat }}">{{ msg }}</div>
+  {% endfor %}
+</div>
+
+<!-- Filters -->
+<div class="filters">
+  <form method="get" action="{{ url_for('downloads_index') }}">
+    <div class="filter-row">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" name="q" placeholder="Search publications…" value="{{ search }}">
+      </div>
+      <div class="filter-cats">
+        <a href="{{ url_for('downloads_index') }}" class="cat-pill" >All</a>
+        {% for cat in categories %}
+        <a href="{{ url_for('downloads_index') }}?cat={{ cat.id }}{% if search %}&q={{ search }}{% endif %}"
+           class="cat-pill {% if active_cat == cat.id %}active{% endif %}">{{ cat.name }}</a>
+        {% endfor %}
+      </div>
+      <span class="result-count">{{ pdfs|length }} result{{ 's' if pdfs|length != 1 }}</span>
+    </div>
+  </form>
+</div>
+
+<!-- Featured -->
+{% if featured and not search and not active_cat %}
+<div class="featured-sec">
+  <div class="sec-label"><span class="sec-label-bar"></span>Featured Resources</div>
+  <div class="feat-grid">
+    {% for pdf in featured %}
+    <div class="feat-pdf">
+      <div class="pdf-icon">📄</div>
+      <h3>{{ pdf.title }}</h3>
+      <div class="feat-meta">{{ pdf.size_str }} &nbsp;·&nbsp; {{ pdf.uploaded_at.strftime('%b %Y') }}</div>
+      <a href="{{ url_for('download_file', pdf_id=pdf.id) }}" class="dl-btn">⬇ Download</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- Main PDF Grid -->
+<div class="main-content">
+  {% if pdfs %}
+  <div class="pdf-grid">
+    {% for pdf in pdfs %}
+    <div class="pdf-card">
+      <div class="pdf-card-top">
+        <div class="pdf-card-icon">📄</div>
+        <div class="pdf-card-cat">{{ pdf.category.name if pdf.category else 'General' }}</div>
+      </div>
+      <div class="pdf-card-body">
+        <h3>{{ pdf.title }}</h3>
+        {% if pdf.description %}<p>{{ pdf.description }}</p>{% endif %}
+        <div class="pdf-meta-row">
+          <span class="pdf-meta-item">📦 {{ pdf.size_str }}</span>
+          <span class="pdf-meta-item">🗓 {{ pdf.uploaded_at.strftime('%d %b %Y') }}</span>
+        </div>
+      </div>
+      <div class="pdf-card-footer">
+        <a href="{{ url_for('download_file', pdf_id=pdf.id) }}" class="dl-link">
+          ⬇ &nbsp;Download PDF
+        </a>
+        <span class="dl-count">⬇ {{ pdf.downloads }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <div class="empty-icon">📂</div>
+    <h3>No documents found</h3>
+    <p>Try a different search or category.</p>
+  </div>
+  {% endif %}
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="foot-grid">
+   
+    <div class="footer-brand">
+  <a href="../index.html" class="logo">
+    <div class="logo-av">DR</div>
+    <div class="logo-txt">
+      <b style="display:block;font-size:13px;font-weight:600;color:#ffffff">Mohammed Ali Hussain</b>
+      <span style="display:block;font-size:10.5px;color:var(--gold);font-weight:500;letter-spacing:.6px">Professor · Ph.D CS&amp;E</span>
+    </div>
+  </a>
+  <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;max-width:270px;margin-top:13px">
+    Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. He has more than 17 years of teaching experience in India and Abroad.
+  </p>
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 16px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);text-decoration:none;transition:.22s;"
+     onmouseover="this.style.background='rgba(0,119,181,.25)';this.style.borderColor='rgba(0,119,181,.55)'"
+     onmouseout="this.style.background='rgba(255,255,255,.07)';this.style.borderColor='rgba(255,255,255,.13)'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    <span style="font-size:12px;color:rgba(255,255,255,.65);font-weight:500;letter-spacing:.4px">LinkedIn Profile</span>
+  </a>
+</div>
+    <div>
+      <div class="foot-h">Achievements</div>
+      <ul class="foot-ul">
+        <li><a href="#">Bharath Shiksha Award '18</a></li>
+        <li><a href="#">Indian Status Award '18</a></li>
+        <li><a href="#">Mahatma Gandhi Award '18</a></li>
+        <li><a href="#">Best Teacher Award '17</a></li>
+        <li><a href="#">Rashtriya Gaurav Award '17</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">Contact Info</div>
+      <div class="foot-contact">
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/location.png" alt="location">
+          <div><div class="fc-lbl">Location</div><div class="fc-val">Vijayawada, Andhra Pradesh, India</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/email.png" alt="email">
+          <div><div class="fc-lbl">Email</div><div class="fc-val">alihussain.phd@gmail.com</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/website.png" alt="website">
+          <div><div class="fc-lbl">Website</div><div class="fc-val">www.dralihuissain.in</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <p>&copy; 2024 Dr. Mohammed Ali Hussain &mdash; All Rights Reserved.</p>
+   <!-- <p style="color:rgba(201,151,42,.4);font-size:11px;letter-spacing:1.5px">DESIGNED WITH EXCELLENCE</p>-->
+  </div>
+</footer>
+
+
+  <script>
+function openMob() {
+  document.getElementById("mobNav").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMob() {
+  document.getElementById("mobNav").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+window.addEventListener("scroll", function () {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+</script>
+</body>
+</html>

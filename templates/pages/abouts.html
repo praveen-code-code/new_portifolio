@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Dr. Mohammed Ali Hussain</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/abouts.css') }}">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="{{ url_for('index') }}" class="logo">
+    <div class="logo-av">Dr</div>
+    <div class="logo-txt"><b>Mohammed Ali Hussain</b><span>Professor · Ph.D CS&amp;E</span></div>
+  </a>
+ <ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" >Home</a></li>
+    <li><a href="{{ url_for('about') }}" class="on">About</a></li>
+    <li><a href="{{ url_for('publications') }}">Publications</a></li>
+    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+      <li><a href="{{ url_for('downloads_index') }}">pdfs</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+  </ul>
+  <div class="ham" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-x" onclick="closeMob()" aria-label="Close menu">&#10005;</button>
+  <a href="{{ url_for('index') }}" onclick="closeMob()">Home</a>
+  <a href="{{ url_for('about') }}" onclick="closeMob()">About</a>
+  <a href="{{ url_for('publications') }}" onclick="closeMob()">Publications</a>
+  <a href="{{ url_for('downloads_index') }}" onclick="closeMob()">pdfs</a>
+  <a href="{{ url_for('contact') }}"  onclick="closeMob()">Contact</a>
+</div>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div class="banner-inner">
+    <div class="banner-eyebrow"><span class="banner-line"></span>Professor · Researcher · Innovator<span class="banner-line"></span></div>
+    <h1>About <i>Dr. Mohammed</i><br>Ali Hussain</h1>
+    <div class="breadcrumb" style="margin-top:16px">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span>About</span>
+    </div>
+  </div>
+  <div class="banner-deco">MAH</div>
+</div>
+
+<!-- MAIN ABOUT CONTENT -->
+<div style="background:var(--white)">
+<div class="about-main">
+
+  <!-- BIO GRID -->
+  <div class="about-bio-grid">
+    <div class="portrait-col fade-left">
+      <div class="deco1"></div>
+      <div class="portrait-frame">
+        <div class="portrait-bg">
+  <img src="../images/about.jpg" alt="Dr. Mohammed Ali Hussain">
+</div>
+        <div class="portrait-overlay">
+          <div class="portrait-name">Dr. Mohammed Ali Hussain</div>
+          <div class="portrait-role">Professor · Researcher · Ph.D CS&amp;E</div>
+        </div>
+      </div>
+      <div class="deco2"></div>
+      <div class="exp-pill"><b>17+</b><span>Yrs Experience</span></div>
+    </div>
+
+    <div class="fade-right">
+      <div class="tag"><span class="tag-bar"></span>About</div>
+      <h2 class="st">The Academic<br>Behind the Research</h2>
+      <div class="div"></div>
+      <p class="bio-p">Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. He has more than 17 years of teaching experience in India and Abroad.</p>
+      <p class="bio-p">He has been awarded with different prestigious awards like <strong>Mahatma Gandhi Award for Teaching and Research Excellence, Engineering &amp; Technology Research Excellence Award, Rashtriya Gaurav Award, Innovative Technological Research &amp; Dedicated Teaching Professional Award</strong> and <strong>Best Computer Science Faculty Award</strong> from various Technical &amp; Professional Organizations.</p>
+      <div class="blockq"><p>"Dr. Ali Hussain has published about 150 refereed technical articles in scholarly International Journals and proceedings of International Conferences. He has Published 6 Patents and 3 Book Chapters with reputed publishers."</p></div>
+      <p class="bio-p">He is Chief Editor/Advisory Board Member and Technical Review Member of more than 100 peer reviewed International Journals. He has acted as Program Committee Member for various IEEE Symposiums and conferences around the world.</p>
+      <p class="bio-p">He is a recognized supervisor for Ph.D. from various Universities and Produced 10 Ph.D's to his credit. He has been invited to deliver keynote speeches/Guest Lectures at various National &amp; International Conferences in India and Abroad. He is a professional member of FISEEE, ASDF, IACSIT, IAENG, IAEST, IRACST and UACEE.</p>
+      <div class="chips">
+        <span class="chip">SAP Consultant</span>
+        <span class="chip">DB2 Certified</span>
+        <span class="chip">Microsoft Certified</span>
+        <span class="chip">Network Security</span>
+        <span class="chip">Wireless Adhoc</span>
+        <span class="chip">Cloud Computing</span>
+        <span class="chip">Machine Learning</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar fade-up">
+    <div class="stat-item">
+      <div class="stat-n" data-count="4">0</div>
+      <div class="stat-label">Workshops</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n" data-count="150">0</div>
+      <div class="stat-label">Publications</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n" data-count="100">0</div>
+      <div class="stat-label">Review Journals</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n" data-count="15">0</div>
+      <div class="stat-label">Memberships</div>
+    </div>
+  </div>
+
+  <!-- AWARDS SECTION -->
+  <div class="section-block" id="awards">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Recognition</div>
+      <h2 class="st">Awards &amp; Honours</h2>
+      <div class="div"></div>
+      <p class="bio-p" style="max-width:700px">Awarded Best Academic Researcher and Best Computer Science Faculty across multiple national and international platforms.</p>
+    </div>
+    <div class="awards-grid">
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Outstanding Achievement in Research Innovation Award"</b>from Amaravathi Research Academy on 16th November 2019.<span class="award-year">2019</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>Researcher of the Year 2019</b>from GSR Foundation and The American College of Dubai, Dubai UAE on 31st October 2019.<span class="award-year">2019</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Best Teacher Award"</b>in the Dept. of Electronics and Computer Engineering, KL University for the Academic Year 2017-18.<span class="award-year">2017–18</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>Bharath Shiksha Award &amp; Gold Medal</b>for contribution in the field of Education.<span class="award-year">2018</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>Indian Status Award for Intellectual People</b><span class="award-year">2018</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>Mahatma Gandhi Award for Teaching and Research Excellence</b>from Friendship Forum of India, New Delhi. Ceremony at India International Center, Lodhi Garden on 25th September 2018.<span class="award-year">2018</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Best Computer Science Faculty"</b>from Association of Scientists, Developers, and Faculties (ASDF) — International Global Awards at Holiday Inn Resort, Goa on 30th December 2017.<span class="award-year">2017</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Engineering &amp; Technology Research Excellence Award – 2017"</b>from Global Leaders Foundation. Received from Balmiki Prasad Singh former Governor of Sikkim on 4th October 2017, Constitution Club of India, New Delhi.<span class="award-year">2017</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Rashtriya Gaurav Award"</b>from India International Friendship Society, New Delhi. Ceremony at India International Center, Lodhi Garden, New Delhi on 27th May 2017.<span class="award-year">2017</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Innovative Technological Research &amp; Dedicated Teaching Professional Award'17"</b>organized by Engineering Today in Association with Society of Engineers &amp; Technicians, Kuala Lumpur, Malaysia on 11th March 2017.<span class="award-year">2017</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Award for Research Excellence"</b>INDO-AMERICAN EDUCATION SUMMIT 2016, The Indus Foundation INC, USA &amp; INDIA held at Taj Banjara, Hyderabad on 17th September 2016.<span class="award-year">2016</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Young Faculty Award"</b>Venus International Foundation Faculty Awards – VIFFA 2015, received from Vice Chancellor, Anna University, held on 5th July 2015 at Radha Regent, Chennai.<span class="award-year">2015</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Best Teacher Award"</b>in the Dept. of Electronics and Computer Engineering, KL University for the Academic Year 2013-14.<span class="award-year">2013–14</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Award for Excellence in Research"</b>2nd Academic Brilliance Awards – 2014, presented by Educationexpro TV (Research &amp; Branding Company), held on 9th Feb 2014 at Noida.<span class="award-year">2014</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="1">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>"Best Academic Researcher Award 2012"</b>from Association of Scientists, Developers and Faculties (ASDF) (Techno Forum Research and Development Centre, Pondicherry, India, Asia) from Chief Minister Rangaswamy, held in Pondicherry on 30th December 2012.<span class="award-year">2012</span></p>
+        </div>
+      </div>
+      <div class="award-row fade-up" data-d="2">
+        <span class="award-dot"></span>
+        <div>
+          <p><b>Certificate of Appreciation as Most Active Reviewer</b>of The International Arab Journal of Information Technology (AJIT) for the year 2011 &amp; 2012.<span class="award-year">2011–12</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHOLARS SECTION -->
+  <div class="section-block" id="scholars">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>PhD Supervision</div>
+      <h2 class="st">Scholars</h2>
+      <div class="div"></div>
+      <p class="bio-p" style="max-width:700px">Ph.D's Awarded/Submitted under the supervision of Dr. Mohammed Ali Hussain.</p>
+    </div>
+    <div class="scholars-list">
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">1</div>
+        <div class="scholar-info">
+          <div class="scholar-name">Kamesh</div>
+          <div class="scholar-topic">Multiple Pattern Based Graphical Password Authentication Technique for Touch-Based Devices</div>
+          <div class="scholar-meta">Submitted in February 2021</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">2</div>
+        <div class="scholar-info">
+          <div class="scholar-name">Syed Umar</div>
+          <div class="scholar-topic">Performance Analysis of IEEE 802.11 MAC and Physical Layer Protocol</div>
+          <div class="scholar-meta">Awarded in February 2017</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">3</div>
+        <div class="scholar-info">
+          <div class="scholar-name">R. Thirupathi</div>
+          <div class="scholar-topic">Energy Aware Routing Protocols Scheme in Wireless Sensor Networks</div>
+          <div class="scholar-meta">Awarded in January 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">4</div>
+        <div class="scholar-info">
+          <div class="scholar-name">Moulana Mohammed</div>
+          <div class="scholar-topic">A New Approach to Generate Simplified Decision Trees for Improved Learning</div>
+          <div class="scholar-meta">Awarded in May 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">5</div>
+        <div class="scholar-info">
+          <div class="scholar-name">L. Sridhara Rao</div>
+          <div class="scholar-topic">The Medium Access Control Mechanism for Multihop Wireless Networks</div>
+          <div class="scholar-meta">Awarded in June 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">6</div>
+        <div class="scholar-info">
+          <div class="scholar-name">T. Bala Murali Krishna</div>
+          <div class="scholar-topic">Power Consumption Model for Evaluating Routing Performance on AODV Protocol for MANETs with MADA-AODV</div>
+          <div class="scholar-meta">Awarded in October 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">7</div>
+        <div class="scholar-info">
+          <div class="scholar-name">R. Bulli Babu</div>
+          <div class="scholar-topic">Improvement of Class Imbalance Learning Techniques using Unsupervised Learning and Subset Filtering Approaches</div>
+          <div class="scholar-meta">Awarded in October 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">8</div>
+        <div class="scholar-info">
+          <div class="scholar-name">Shrija Somraj</div>
+          <div class="scholar-topic">A Novel Approach to Securing Images by Symmetric Encryption using a Key Image</div>
+          <div class="scholar-meta">Awarded in December 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">9</div>
+        <div class="scholar-info">
+          <div class="scholar-name">B. Subbaiah</div>
+          <div class="scholar-topic">Quality-aware Wireless MAC Protocol Using Network Load Adaptation</div>
+          <div class="scholar-meta">Awaiting Viva – Submitted in 2018</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">10</div>
+        <div class="scholar-info">
+          <div class="scholar-name">K. Kumar</div>
+          <div class="scholar-topic">Robust Digital Watermarking Algorithms for Copyright Protection of Digital Content</div>
+          <div class="scholar-meta">Awarded in August 2019</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">11</div>
+        <div class="scholar-info">
+          <div class="scholar-name">K. Siva Ramakrishna</div>
+          <div class="scholar-topic">A Hybrid Load Balancing Based Resource Optimization Models in Cloud Computing Environment</div>
+          <div class="scholar-meta">Submitted in August 2019</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">12</div>
+        <div class="scholar-info">
+          <div class="scholar-name">K. Durga Prasad</div>
+          <div class="scholar-topic">A Novel Approach for cDNA Image Segmentation using SLIC based SOM Methodology</div>
+          <div class="scholar-meta">Awarded in August 2019</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="1">
+        <div class="scholar-num">13</div>
+        <div class="scholar-info">
+          <div class="scholar-name">Y. Srinivasa Rao</div>
+          <div class="scholar-topic">Quality of Service 802.11 Wireless MAC Protocol Using Network Load Balancing</div>
+          <div class="scholar-meta">Submitted in May 2019</div>
+        </div>
+      </div>
+      <div class="scholar-row fade-up" data-d="2">
+        <div class="scholar-num">14</div>
+        <div class="scholar-info">
+          <div class="scholar-name">I.S.N. Pradeep</div>
+          <div class="scholar-topic">Exploring Innovative Possibilities of Interactive Animation through Open Source</div>
+          <div class="scholar-meta">Submitted in May 2019</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PROFILE SECTION ═══ -->
+  <div class="section-block" id="profile">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Career Profile</div>
+      <h2 class="st">Profile &amp; Employment</h2>
+      <div class="div"></div>
+    </div>
+
+    <!-- Employment -->
+    <div class="two-col-section">
+      <div class="info-card fade-up" data-d="1">
+        <div class="info-card-head">
+          <div class="ih-icon">💼</div>
+          <h3>Employment</h3>
+        </div>
+        <div class="info-card-body">
+          <div class="info-row"><span class="info-dot"></span><p><b>Professor</b>, Department of Computer Science &amp; Engineering, KL University, India.</p></div>
+        </div>
+      </div>
+
+      <!-- Guideship / Research Supervisor -->
+      <div class="info-card fade-up" data-d="2">
+        <div class="info-card-head">
+          <div class="ih-icon">🎓</div>
+          <h3>Guideship / Research Supervisor — Ph.D. (CS&amp;E)</h3>
+        </div>
+        <div class="info-card-body">
+          <div class="info-row"><span class="info-dot"></span><p><b>Bharathiar University</b> <em>Coimbatore, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>Sathyabama University</b> <em>Chennai, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>KL University</b> <em>Guntur Dist, Andhra Pradesh, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV) University</b> <em>Kanchipuram, Tamil Nadu, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>Dravidian University</b> <em>Kuppam, Andhra Pradesh, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>Annamalai University</b> <em>Tamil Nadu, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>AMET University</b> <em>Chennai, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>Shri Venkateshwara University</b> <em>Uttar Pradesh, India</em></p></div>
+          <div class="info-row"><span class="info-dot"></span><p><b>B.S. Abdur Rahman University</b> <em>Chennai, India</em></p></div>
+        </div>
+      </div>
+
+      <!-- M.Tech Projects Examiner -->
+      <div class="info-card fade-up" data-d="1">
+        <div class="info-card-head">
+          <div class="ih-icon">📋</div>
+          <h3>Projects Examiner — M.Tech Dissertations</h3>
+        </div>
+        <div class="info-card-body">
+          <div class="info-row"><span class="info-dot"></span><p><b>M.Tech (Computer Science &amp; Engineering)</b> — Dissertation Adjudicated and acted as External Examiner for award of M.Tech(CSE) for 2 scholars at Mazoon University College, Sultanate of Oman.</p></div>
+        </div>
+      </div>
+
+      <!-- M.Phil & Ph.D Thesis Adjudicated -->
+      <div class="info-card fade-up" data-d="2">
+        <div class="info-card-head">
+          <div class="ih-icon">🏛️</div>
+          <h3>M.Phil &amp; Ph.D. Thesis Adjudicated</h3>
+        </div>
+        <div class="info-card-body">
+          <div class="info-row"><span class="info-dot"></span><p>Bharathiar University</p></div>
+          <div class="info-row"><span class="info-dot"></span><p>Acharya Nagarjuna University</p></div>
+          <div class="info-row"><span class="info-dot"></span><p>Rayalaseema University</p></div>
+          <div class="info-row"><span class="info-dot"></span><p>Mother Teresa Women's University</p></div>
+          <div class="info-row"><span class="info-dot"></span><p>Manonmaniam Sundaranar University</p></div>
+          <div class="info-row"><span class="info-dot"></span><p>Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV) University</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research Contributions -->
+    <div style="margin-top:56px" class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Research Impact</div>
+      <h2 class="st">Research Contributions</h2>
+      <div class="div"></div>
+      <p class="bio-p" style="max-width:700px">Ph.D's Produced/Submitted &amp; Projects Guided across India and internationally.</p>
+    </div>
+    <div class="contrib-grid">
+      <div class="contrib-card fade-up" data-d="1">
+        <div class="contrib-n">10</div>
+        <div class="contrib-lbl">Ph.D's Awarded</div>
+        <div class="contrib-desc">Doctoral scholars awarded under direct supervision</div>
+      </div>
+      <div class="contrib-card fade-up" data-d="2">
+        <div class="contrib-n">8</div>
+        <div class="contrib-lbl">Ph.D's Submitted</div>
+        <div class="contrib-desc">Research scholars currently in evaluation process</div>
+      </div>
+      <div class="contrib-card fade-up" data-d="3">
+        <div class="contrib-n">1</div>
+        <div class="contrib-lbl">M.Phil Awarded</div>
+        <div class="contrib-desc">Master of Philosophy degree awarded under guidance</div>
+      </div>
+      <div class="contrib-card fade-up" data-d="1">
+        <div class="contrib-n">50+</div>
+        <div class="contrib-lbl">M.Tech Projects</div>
+        <div class="contrib-desc">M.Tech projects guided from the past 10 years</div>
+      </div>
+      <div class="contrib-card fade-up" data-d="2">
+        <div class="contrib-n">100+</div>
+        <div class="contrib-lbl">B.Tech Projects</div>
+        <div class="contrib-desc">B.Tech projects guided from the past 15 years</div>
+      </div>
+      <div class="contrib-card fade-up" data-d="3">
+        <div class="contrib-n" style="font-size:30px;margin-top:8px">Wireless · InfoSec<br>Image · Data</div>
+        <div class="contrib-lbl" style="margin-top:6px">Research Domains</div>
+        <div class="contrib-desc">Supervising Ph.D's in Wireless Networks, Information Security, Image Processing &amp; Data Mining</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ EDUCATION SECTION ═══ -->
+  <div class="section-block" id="education" style="background:var(--off);padding:64px 36px;border-radius:16px;border:1.5px solid var(--border);margin-bottom:0">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Academic Background</div>
+      <h2 class="st">Education</h2>
+      <div class="div"></div>
+      <p class="bio-p" style="max-width:600px">Academic qualifications and professional credentials that form the foundation of over 17 years of research excellence.</p>
+    </div>
+
+    <!-- Academic -->
+    <div class="fade-up" data-d="1" style="margin-top:36px">
+      <div style="font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:8px"><span style="width:22px;height:1.5px;background:var(--gold);display:inline-block"></span>Academics</div>
+    </div>
+    <div class="edu-timeline fade-up" data-d="2">
+      <div class="edu-item">
+        <h4>Post-Doctoral Research</h4>
+        <p>Post-Doc from LUC (Limburg Catholic University College), Malaysia</p>
+        <span class="edu-badge">Post-Doc · Malaysia</span>
+      </div>
+      <div class="edu-item">
+        <h4>Ph.D. — Computer Science &amp; Engineering</h4>
+        <p>Acharya Nagarjuna University, Andhra Pradesh, India</p>
+        <span class="edu-badge">Doctoral · Ph.D. CS&amp;E</span>
+      </div>
+    </div>
+
+    <!-- Professional Qualifications -->
+    <div class="prof-qual-grid fade-up" data-d="2">
+
+  <div class="pq-item">
+    <div class="pq-icon">
+      <img src="../images/icons/ibm.png" alt="DB2 Certification">
+    </div>
+    <p><b>IBM Certified in DB2 Database Associate</b>Enterprise database management certification</p>
+  </div>
+
+  <div class="pq-item">
+    <div class="pq-icon">
+      <img src="../images/icons/microsoft.png" alt="Microsoft">
+    </div>
+    <p><b>Microsoft Certified</b>Microsoft technology professional certification</p>
+  </div>
+
+  <div class="pq-item">
+    <div class="pq-icon">
+      <img src="../images/icons/java.png" alt="Java">
+    </div>
+    <p><b>Diploma in Java Programming</b>from Com Tec, India</p>
+  </div>
+
+  <div class="pq-item">
+    <div class="pq-icon">📟</div>
+    <p><b>'A' Level</b>from Department of Electronics (DOEACC), New Delhi</p>
+  </div>
+
+</div>
+  <!-- ═══ SKILL SET SECTION ═══ -->
+  <div class="section-block" id="skills">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Technical Expertise</div>
+      <h2 class="st">Skill Set</h2>
+      <div class="div"></div>
+      <p class="bio-p" style="max-width:600px">A comprehensive blend of software platforms, programming languages, and management skills built over 17+ years.</p>
+    </div>
+    <div class="skills-wrapper">
+      <!-- Softwares -->
+      <div class="skill-group fade-up" data-d="1">
+        <div class="skill-group-head">
+          <div class="sg-icon">⚙️</div>
+          <h4>Software's</h4>
+        </div>
+        <div class="skill-group-body">
+          <div class="skill-item"><span class="skill-bullet"></span><span>Hadoop Framework</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="88"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>SAP BASIS Administration</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="92"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>Oracle DBA</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="85"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>Solaris Administration</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="80"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>DB2</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="95"></div></div></div>
+        </div>
+      </div>
+      <!-- Languages -->
+      <div class="skill-group fade-up" data-d="2">
+        <div class="skill-group-head">
+          <div class="sg-icon">💻</div>
+          <h4>Languages</h4>
+        </div>
+        <div class="skill-group-body">
+          <div class="skill-item"><span class="skill-bullet"></span><span>Java</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="90"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>C++</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="85"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>C</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="88"></div></div></div>
+        </div>
+      </div>
+      <!-- Other Skills -->
+      <div class="skill-group fade-up" data-d="3">
+        <div class="skill-group-head">
+          <div class="sg-icon">🧩</div>
+          <h4>Other Skill Set</h4>
+        </div>
+        <div class="skill-group-body">
+          <div class="skill-item"><span class="skill-bullet"></span><span>Software Project Management</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="93"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>Network Security</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="90"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>Cloud Computing</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="88"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>Machine Learning</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="82"></div></div></div>
+          <div class="skill-item"><span class="skill-bullet"></span><span>Data Mining</span><div class="skill-bar-wrap"><div class="skill-bar" data-w="85"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section-block">
+  <div class="fade-up">
+    <div class="tag"><span class="tag-bar"></span>Credentials</div>
+    <h2 class="st">Certifications</h2>
+    <div class="div"></div>
+  </div>
+
+  <div class="certs-grid">
+
+    <div class="cert-card fade-up" data-d="1">
+      <div class="cert-icon">
+        <img src="../images/icons/sap.png" alt="SAP Consultant">
+      </div>
+      <h4>SAP Consultant</h4>
+      <p>Certified SAP professional with enterprise application expertise</p>
+    </div>
+
+    <div class="cert-card fade-up" data-d="2">
+      <div class="cert-icon">
+        <img src="../images/icons/db2.png" alt="DB2 Certified">
+      </div>
+      <h4>DB2 Certified</h4>
+      <p>IBM DB2 Certified Professional for database management</p>
+    </div>
+
+    <div class="cert-card fade-up" data-d="3">
+      <div class="cert-icon">
+        <img src="../images/icons/microsoft.png" alt="Microsoft Certified">
+      </div>
+      <h4>Microsoft Certified</h4>
+      <p>Microsoft Certified Professional across multiple technologies</p>
+    </div>
+
+    <div class="cert-card fade-up" data-d="4">
+      <div class="cert-icon">
+        <img src="../images/icons/wifi.png" alt="Wireless Adhoc Networks">
+      </div>
+      <h4>Wireless Adhoc Networks</h4>
+      <p>Researcher specializing in wireless adhoc network systems</p>
+    </div>
+
+    <div class="cert-card fade-up" data-d="5">
+      <div class="cert-icon">
+        <img src="../images/icons/network.png" alt="Network Security">
+      </div>
+      <h4>Network & Web Security</h4>
+      <p>Specialist in networks and web security infrastructure</p>
+    </div>
+
+  </div>
+</div>
+
+  <!-- PROFESSIONAL MEMBERSHIPS -->
+  <div class="section-block">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Professional Organizations</div>
+      <h2 class="st">Memberships</h2>
+      <div class="div"></div>
+      <p class="bio-p" style="max-width:600px">Member of 15+ international professional organizations contributing to standards, policies, and the future of computing.</p>
+    </div>
+    <div class="member-grid fade-up" data-d="1">
+      <div class="member-tag">FISEEE</div>
+      <div class="member-tag">ASDF</div>
+      <div class="member-tag">IACSIT</div>
+      <div class="member-tag">IAENG</div>
+      <div class="member-tag">IAEST</div>
+      <div class="member-tag">IRACST</div>
+      <div class="member-tag">UACEE</div>
+      <div class="member-tag">IEEE</div>
+      <div class="member-tag">ACM</div>
+      <div class="member-tag">CSI</div>
+      <div class="member-tag">ISTE</div>
+      <div class="member-tag">IETE</div>
+      <div class="member-tag">IE(I)</div>
+      <div class="member-tag">CSTA</div>
+      <div class="member-tag">ISOC</div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="section-block">
+    <div class="fade-up">
+      <div class="tag"><span class="tag-bar"></span>Gallery</div>
+      <h2 class="st">Moments &amp; Milestones</h2>
+      <div class="div"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-up" data-d="1" style="background:linear-gradient(135deg,#1a2e55,#0d1b35)"><div class="gallery-placeholder">IEEE</div></div>
+      <div class="gallery-item fade-up" data-d="2" style="background:linear-gradient(135deg,#2a1a10,#1a0d05)"><div class="gallery-placeholder">KL</div></div>
+      <div class="gallery-item fade-up" data-d="3" style="background:linear-gradient(135deg,#10251a,#051510)"><div class="gallery-placeholder">MY</div></div>
+      <div class="gallery-item fade-up" data-d="1" style="background:linear-gradient(135deg,#251015,#15050a)"><div class="gallery-placeholder">ANU</div></div>
+      <div class="gallery-item fade-up" data-d="2" style="background:linear-gradient(135deg,#1a1025,#0d0515)"><div class="gallery-placeholder">KL</div></div>
+      <div class="gallery-item fade-up" data-d="3" style="background:linear-gradient(135deg,#0d2535,#05151d)"><div class="gallery-placeholder">GLB</div></div>
+    </div>
+   <!-- <p style="font-size:12px;color:var(--muted);margin-top:14px;text-align:center">Replace gallery placeholders with your actual images (src="./images/gallery1.jpg" etc.)</p>-->
+  </div>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip fade-up" id="contact">
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div>
+        <div class="contact-lbl">Location</div>
+        <div class="contact-val">Vijayawada, Andhra Pradesh, India</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <div class="contact-lbl">Email</div>
+        <div class="contact-val">alihussain.phd@gmail.com</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">🌐</div>
+      <div>
+        <div class="contact-lbl">Website</div>
+        <div class="contact-val">www.dralihussain.in</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /about-main -->
+</div>
+
+<!-- FOOTER: replace fc-ico src="" with location/email/web icons -->
+<footer id="contact">
+  <div class="foot-grid">
+   
+    <div class="footer-brand">
+  <a href="../index.html" class="logo">
+    <div class="logo-av">DR</div>
+    <div class="logo-txt">
+      <b style="display:block;font-size:13px;font-weight:600;color:#ffffff">Mohammed Ali Hussain</b>
+      <span style="display:block;font-size:10.5px;color:var(--gold);font-weight:500;letter-spacing:.6px">Professor · Ph.D CS&amp;E</span>
+    </div>
+  </a>
+  <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;max-width:270px;margin-top:13px">
+    Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. He has more than 17 years of teaching experience in India and Abroad.
+  </p>
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 16px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);text-decoration:none;transition:.22s;"
+     onmouseover="this.style.background='rgba(0,119,181,.25)';this.style.borderColor='rgba(0,119,181,.55)'"
+     onmouseout="this.style.background='rgba(255,255,255,.07)';this.style.borderColor='rgba(255,255,255,.13)'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    <span style="font-size:12px;color:rgba(255,255,255,.65);font-weight:500;letter-spacing:.4px">LinkedIn Profile</span>
+  </a>
+</div>
+    <div>
+      <div class="foot-h">Achievements</div>
+      <ul class="foot-ul">
+        <li><a href="#">Bharath Shiksha Award '18</a></li>
+        <li><a href="#">Indian Status Award '18</a></li>
+        <li><a href="#">Mahatma Gandhi Award '18</a></li>
+        <li><a href="#">Best Teacher Award '17</a></li>
+        <li><a href="#">Rashtriya Gaurav Award '17</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">Contact Info</div>
+      <div class="foot-contact">
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/location.png" alt="location">
+          <div><div class="fc-lbl">Location</div><div class="fc-val">Vijayawada, Andhra Pradesh, India</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/email.png" alt="email">
+          <div><div class="fc-lbl">Email</div><div class="fc-val">alihussain.phd@gmail.com</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/website.png" alt="website">
+          <div><div class="fc-lbl">Website</div><div class="fc-val">www.dralihuissain.in</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <p>&copy; 2024 Dr. Mohammed Ali Hussain &mdash; All Rights Reserved.</p>
+    <!--<p style="color:rgba(201,151,42,.4);font-size:11px;letter-spacing:1.5px">DESIGNED WITH EXCELLENCE</p>-->
+  </div>
+</footer>
+
+<script>
+/* ══ NAVBAR SCRIPT ══ */
+
+// Navbar scroll effect
+const navEl = document.getElementById('nav');
+
+window.addEventListener('scroll', () => {
+  navEl.classList.toggle('scrolled', window.scrollY > 40);
+
+  let cur = 'hero';
+  document.querySelectorAll('[id]').forEach(section => {
+    if (window.scrollY >= section.offsetTop - 100) {
+      cur = section.id;
+    }
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.classList.toggle(
+      'on',
+      link.getAttribute('href') === '#' + cur
+    );
+  });
+
+}, { passive: true });
+
+/* MOBILE MENU */
+function openMob() {
+  document.getElementById('mobNav').classList.add('open');
+  document.querySelector('.ham').style.display = 'none';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMob() {
+  document.getElementById('mobNav').classList.remove('open');
+  document.querySelector('.ham').style.display = 'flex';
+  document.body.style.overflow = '';
+}
+
+// Close on ESC key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMob();
+});
+
+// Close when clicking outside the links area
+document.getElementById('mobNav').addEventListener('click', function(e) {
+  if (e.target === this) closeMob();
+});
+
+/* SCROLL FADE REVEAL — same as home page */
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      fadeObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => fadeObs.observe(el));
+
+/* COUNTERS */
+function animCount(el, target, ms = 1600) {
+  let s = null;
+  const tick = ts => {
+    if (!s) s = ts;
+    const p = Math.min((ts - s) / ms, 1);
+    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target + '+';
+  };
+  requestAnimationFrame(tick);
+}
+const cntObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animCount(e.target, +e.target.dataset.count);
+      cntObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+
+/* SKILL BARS */
+const barObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-bar').forEach(bar => {
+        setTimeout(() => { bar.style.width = bar.dataset.w + '%'; }, 200);
+      });
+      barObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skill-group').forEach(el => barObs.observe(el));
+
+/* BANNER ENTRANCE ANIMATION */
+window.addEventListener('load', () => {
+  const bannerItems = document.querySelectorAll('.page-banner .banner-eyebrow, .page-banner h1, .page-banner .breadcrumb');
+  bannerItems.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(22px)';
+    el.style.transition = `opacity .65s ease ${i * .15}s, transform .65s ease ${i * .15}s`;
+    setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 80 + i * 120);
+  });
+});
+</script>
+</body>
+</html>

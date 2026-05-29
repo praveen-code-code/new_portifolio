@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login — Dr. MAH</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#c9972a;--gold2:#e2b84a;--navy:#0d1b35;--navy3:#1e3160;--border:#e6e2d8;--mid:#585870}
+body{font-family:'DM Sans',sans-serif;background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{width:100%;max-width:420px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.3)}
+.card-top{background:linear-gradient(135deg,var(--navy),var(--navy3));padding:36px 36px 30px;text-align:center;position:relative;overflow:hidden}
+.card-top::after{content:'';position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:rgba(201,151,42,.08)}
+.av{width:62px;height:62px;border-radius:50%;background:rgba(201,151,42,.15);border:2px solid rgba(201,151,42,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--gold2);position:relative;z-index:1}
+.card-top h1{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff;font-weight:700;position:relative;z-index:1}
+.card-top p{font-size:11.5px;color:rgba(255,255,255,.4);letter-spacing:.8px;text-transform:uppercase;margin-top:4px;position:relative;z-index:1}
+.card-body{padding:32px 36px 36px}
+.field{margin-bottom:18px}
+label{display:block;font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mid);margin-bottom:6px}
+input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;color:#181825;transition:.2s;outline:none}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,151,42,.12)}
+.btn{width:100%;padding:13px;border-radius:8px;background:var(--navy);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;border:none;cursor:pointer;transition:.24s;margin-top:8px}
+.btn:hover{background:var(--navy3);box-shadow:0 8px 22px rgba(13,27,53,.28);transform:translateY(-1px)}
+.alert{padding:10px 14px;border-radius:7px;font-size:13px;margin-bottom:16px}
+.alert-error{background:#fdf0f0;color:#8b2020;border:1px solid #f0b8b8}
+.back{display:block;text-align:center;margin-top:18px;font-size:12.5px;color:var(--mid);text-decoration:none}
+.back:hover{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-top">
+    <div class="av">MA</div>
+    <h1>Admin Portal</h1>
+    <p>Dr. Mohammed Ali Hussain</p>
+  </div>
+  <div class="card-body">
+    {% for cat, msg in get_flashed_messages(with_categories=True) %}
+    <div class="alert alert-{{ cat }}">{{ msg }}</div>
+    {% endfor %}
+    <form method="post">
+      <div class="field">
+        <label>Username</label>
+        <input type="text" name="username" required autofocus placeholder="admin">
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="••••••••">
+      </div>
+      <button class="btn" type="submit">Sign In →</button>
+    </form>
+    <a href="/" class="back">← Back to Downloads</a>
+  </div>
+</div>
+</body>
+</html>

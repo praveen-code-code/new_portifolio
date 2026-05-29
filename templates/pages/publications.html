@@ -1,0 +1,1033 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Dr. Mohammed Ali Hussain</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/publications.css') }}">
+</head>
+<body>
+
+
+<nav id="nav">
+  <a href="{{ url_for('index') }}" class="logo">
+    <div class="logo-av">MA</div>
+    <div class="logo-txt"><b>Mohammed Ali Hussain</b><span>Professor · Ph.D CS&amp;E</span></div>
+  </a>
+ <ul class="nav-links">
+    <li><a href="{{ url_for('index') }}" >Home</a></li>
+    <li><a href="{{ url_for('about') }}" >About</a></li>
+    <li><a href="{{ url_for('publications') }}"class="on">Publications</a></li>
+    <li><a href="{{ url_for('gallery') }}" >Gallery</a></li>
+      <li><a href="{{ url_for('downloads_index') }}">pdfs</a></li>
+    <li><a href="{{ url_for('contact') }}" >Contact</a></li>
+  </ul>
+  <div class="ham" onclick="openMob()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-x" onclick="closeMob()" aria-label="Close menu">&#10005;</button>
+  <a href="{{ url_for('index') }}" onclick="closeMob()">Home</a>
+  <a href="{{ url_for('about') }}" onclick="closeMob()">About</a>
+  <a href="{{ url_for('publications') }}" onclick="closeMob()">Publications</a>
+  <a href="{{ url_for('downloads_index') }}" onclick="closeMob()">pdfs</a>
+  <a href="{{ url_for('contact') }}"  onclick="closeMob()">Contact</a>
+</div>
+
+
+<!-- HERO -->
+<div class="pub-hero">
+  <div class="hero-inner fade-up">
+    <div class="hero-eyebrow"><span class="pulse"></span>Research Output</div>
+    <h1>Publications &amp;<br><em>Research Work</em></h1>
+    <p class="pub-hero-sub">National &amp; international journals, conference papers, books, patents, review memberships, and professional affiliations spanning 17+ years of academic excellence.</p>
+    <div class="hero-counts">
+      <div class="hc"><span class="hc-n">100+</span><span class="hc-l">Journal Papers</span></div>
+      <div class="hc"><span class="hc-n">30+</span><span class="hc-l">Conference Papers</span></div>
+      <div class="hc"><span class="hc-n">9</span><span class="hc-l">Patents</span></div>
+      <div class="hc"><span class="hc-n">2</span><span class="hc-l">Books</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="fbtn active" onclick="filter('all',this)">All</button>
+    <button class="fbtn" onclick="filter('books',this)">Books</button>
+    <button class="fbtn" onclick="filter('patents',this)">Patents</button>
+    <button class="fbtn" onclick="filter('chapters',this)">Book Chapters</button>
+    <button class="fbtn" onclick="filter('intl-journals',this)">Intl. Journals</button>
+    <button class="fbtn" onclick="filter('intl-conf',this)">Intl. Conferences</button>
+    <button class="fbtn" onclick="filter('national',this)">National</button>
+    <button class="fbtn" onclick="filter('review',this)">Review Member</button>
+    <button class="fbtn" onclick="filter('memberships',this)">Memberships</button>
+  </div>
+</div>
+
+<main class="pub-main">
+
+<!-- ══════════════════════════════════════
+     BOOKS
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="books">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>Authored &amp; Edited Works</div><h2>Books</h2></div>
+    <span class="sec-cnt">2 Publications</span>
+  </div>
+  <div class="sec-div"></div>
+
+  <div class="book-feat">
+    <div class="book-spine"><span class="bs-ico">📘</span><span class="bs-txt">Immortal · 2020</span></div>
+    <div class="book-body">
+      <div class="book-badge">📚 Editor · Book</div>
+      <h3>Authentication and Access Control for Secure Communication in Mobile Cloud Computing</h3>
+      <p>Comprehensive treatment of authentication frameworks and access control mechanisms tailored for mobile cloud environments — addressing security challenges in distributed systems with novel cryptographic approaches.</p>
+      <div class="book-meta">
+        <span class="bm">🏢 Immortal Publications, 2020</span>
+        <span class="bm">🔖 ISBN: 978-93-5407-019-8</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-secondary">
+    <div class="bs2-ico">📗</div>
+    <div class="bs2-body">
+      <div class="bs2-tag">📖 Author · Lambert Academic Publishing</div>
+      <h3>The Role of Websites in the Improvements of E-Business and its Security</h3>
+      <p>Lambert Academic Publishing, Germany, 2017 &nbsp;·&nbsp; ISBN: 978-620-2-05899-5</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PATENTS
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="patents">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>Intellectual Property</div><h2>Patents</h2></div>
+    <span class="sec-cnt">9 Patents</span>
+  </div>
+  <div class="sec-div"></div>
+  <div class="patent-grid">
+    <div class="patent-card"><div class="pat-num">P1</div><div class="pat-body"><div class="pat-tag">🔧 System &amp; Method</div><h4>Automatic Inspection of Rail Tracks</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P2</div><div class="pat-body"><div class="pat-tag">🔧 Method</div><h4>Calculation of Domain Specific Score</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P3</div><div class="pat-body"><div class="pat-tag">🔧 System &amp; Method</div><h4>Monitoring and Conserving Energy in Movable and Immovable Objects</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P4</div><div class="pat-body"><div class="pat-tag">🔐 Encryption · System &amp; Method</div><h4>Key Image Based Encryption for Secure Communication of Digital Content</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P5</div><div class="pat-body"><div class="pat-tag">🔧 System &amp; Method</div><h4>Health Monitoring and Accident Tracking in Real Time</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P6</div><div class="pat-body"><div class="pat-tag">🛡️ Security · System &amp; Method</div><h4>Intrusion Detection with Clustering for Wireless Sensor Networks</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P7</div><div class="pat-body"><div class="pat-tag">🔧 System &amp; Method</div><h4>Using Biometric Data for Providing Security and Identification</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P8</div><div class="pat-body"><div class="pat-tag">🌿 Agriculture · System &amp; Method</div><h4>Plant Pathology in Improving Crop Disease Resistance</h4></div></div>
+    <div class="patent-card"><div class="pat-num">P9</div><div class="pat-body"><div class="pat-tag">💊 Healthcare · System &amp; Method</div><h4>Physiological Data Monitoring and Notification System</h4></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     BOOK CHAPTERS
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="chapters">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>International Book Chapters</div><h2>Book Chapter Publications</h2></div>
+    <span class="sec-cnt">2 Chapters</span>
+  </div>
+  <div class="sec-div"></div>
+  <div class="chapter-list">
+    <div class="chapter-card">
+      <div class="ch-tag">📘 IGI Global · USA · 2018</div>
+      <h3>Patient Health Monitoring and Alarming Using Wireless Sensor Network (WSN)</h3>
+      <p>Published in <em>Advances in Healthcare Information Systems and Administration (AHISA)</em>, IGI Global Medical Information Science Reference, United States of America, November 2018.</p>
+    </div>
+    <div class="chapter-card">
+      <div class="ch-tag">📗 United Scholars Publications · USA · 2016</div>
+      <h3>Deployment of Mobile Ad-hoc Network Based on QoS Routing Protocol for Healthcare</h3>
+      <p>Published in <em>Advances in Modern Computational Sciences and Informatics</em>, United Scholars Publications, Rohnert Park, CA 94928, USA, January 2016.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     INTERNATIONAL JOURNALS
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="intl-journals">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>National &amp; International Journal Publications</div><h2>Journal Papers</h2></div>
+    <span class="sec-cnt">100+ Papers</span>
+  </div>
+  <div class="sec-div"></div>
+  <div class="pub-list">
+
+    <div class="pub-row"><div class="pr-num">1</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and S.J. Sultanuddin</div>
+      <div class="pr-title">Token System based Efficient Route Optimization in MANET for VANET in Smart City</div>
+      <div class="pr-venue">Transactions on Emerging Telecommunications Technologies</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">SCI Indexed</span></div>
+    </div><div class="pr-year">—</div></div>
+
+    <div class="pub-row"><div class="pr-num">2</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong>, N. Archana and S. Manogna</div>
+      <div class="pr-title">Secure Sharing of Documents using Image Encryption and Key Image</div>
+      <div class="pr-venue">International Journal of Recent Technology and Engineering (IJRTE), Vol-8 Issue-4, November 2019</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+    <div class="pub-row"><div class="pr-num">3</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong>, Md. Mastan and Syed Umar</div>
+      <div class="pr-title">Quality of Service Issues in Wireless Ad-Hoc Network (IEEE 802.11B)</div>
+      <div class="pr-venue">International Journal of Computer Science &amp; Information Security (IJCSIS), Vol.8 No.3, June 2010, ISSN: 1047-5500</div>
+      <div class="pr-badges"><span class="pr-badge badge-general">IJCSIS</span></div>
+    </div><div class="pr-year">2010</div></div>
+
+    <div class="pub-row"><div class="pr-num">4</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong>, K. Satya Rajesh and Hussain Basha Pathan</div>
+      <div class="pr-title">Use of Smart Antennas in Ad Hoc Networks</div>
+      <div class="pr-venue">IJCSIT, Vol.2 No.6, December 2010, ISSN: 0975-4660</div>
+    </div><div class="pr-year">2010</div></div>
+
+    <div class="pub-row"><div class="pr-num">5</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong> and K. Ravi</div>
+      <div class="pr-title">4G Mobile Broadband – LTE Network Architecture and Protocol Stack</div>
+      <div class="pr-venue">IJRRAN, Vol.1 No.1, March 2011, ISSN: 2046-5106</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">6</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong> and K. Kiran Kumar</div>
+      <div class="pr-title">The Role of Ambient Networks in the Next Generation of Wireless Systems</div>
+      <div class="pr-venue">IJRRAN, Vol.1 No.1, March 2011, ISSN: 2046-5106</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">7</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong> and K. Satya Rajesh</div>
+      <div class="pr-title">Time Series Identification Methodology in Low Level Named Wireless Sensors</div>
+      <div class="pr-venue">IJRRAN, Vol.1 No.1, March 2011, ISSN: 2046-5106</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">8</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong>, M. Ravi Shankar, V. Vijaya Kumar and Y. Srinivasa Rao</div>
+      <div class="pr-title">Energy Conservation Techniques in Adhoc Networks</div>
+      <div class="pr-venue">IJCSIT, Vol.2 Issue 3, May-June 2011, ISSN: 0975-9646</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">9</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong> and K. Ravi</div>
+      <div class="pr-title">System Architecture with E-UTRAN — 3GPP Access Networks</div>
+      <div class="pr-venue">IJCTT, Vol.1 No.1, April 2011, ISSN: 2231-2803</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">10</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong> and K. Ravi</div>
+      <div class="pr-title">A New Paradigm for the Next Generation Wireless Optimization – Cross Layer Design</div>
+      <div class="pr-venue">IJCTA, Vol.1 No.1, May 2011, ISSN: 2229-6093</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">11</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong>, K. Satya Prasad, Md. Moulana and B. Bhanu Prakash</div>
+      <div class="pr-title">An Analysis of Networking MAC Protocols for Wireless Networks</div>
+      <div class="pr-venue">IJRRAN, Vol.1 No.2, June 2011, ISSN: 2046-5106</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">12</div><div class="pr-body">
+      <div class="pr-authors"><strong>Md. Ali Hussain</strong> and M. Rajanikanth</div>
+      <div class="pr-title">Diagnosis and Medical Prescription of Diabetes Using Support Vector Machine and Feedforward Backpropagation Technique</div>
+      <div class="pr-venue">IJRRAI, Vol.1 No.2, June 2011, ISSN: 2046-5122</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">13</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and Dr. K.V. Sambasiva Rao</div>
+      <div class="pr-title">The Role of Commercial Websites in the Improvements of E-Business</div>
+      <div class="pr-venue">IJCTT, Vol.1 Issue 2, May/June 2011, ISSN: 2231-2803</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">14</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, K. Ravi and K. Kiran Kumar</div>
+      <div class="pr-title">The New Dynamic Network Selection Methodology for the Wireless Heterogeneous Networks</div>
+      <div class="pr-venue">IJITES, Vol.1 Issue 1, July 2011, ISSN: 2249-0515</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">15</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, Koti Reddy and Ravindra Reddy</div>
+      <div class="pr-title">GSM-Controllable Power Switch System for Industrial Power Management</div>
+      <div class="pr-venue">IJETT, Vol.1 Issue 2, July/August 2011, ISSN: 2231-5381</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">16</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and M. Rajanikanth</div>
+      <div class="pr-title">Generalized Regression Neural Network and Radial Basis Function for Diabetes Diagnosis</div>
+      <div class="pr-venue">IJRRAI, Vol.1 Issue 3, September 2011, ISSN: 2046-5122</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">17</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, Md. Moulana and B. Bhanu Prakash</div>
+      <div class="pr-title">Essentials of Fuzzy Logic with Embedded Systems</div>
+      <div class="pr-venue">IJRRCE, Vol.1 Issue 3, September 2011, ISSN: 2046-5130</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">18</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and Dr. R. Satya Prasad</div>
+      <div class="pr-title">A Survey on Growth and Success of E-Commerce in Recent Trends</div>
+      <div class="pr-venue">IJSCE, Vol.1 Issue 5, November 2011, ISSN: 2231-2307</div>
+    </div><div class="pr-year">2011</div></div>
+
+    <div class="pub-row"><div class="pr-num">19</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, Ali Mirza Mahmood and Dr. K. Mrithyumjaya Rao</div>
+      <div class="pr-title">A New Approach to Generate Simplified Decision Tree Based on Principal Component Analysis</div>
+      <div class="pr-venue">IJACEA, Vol.2 Issue 1, January–June 2012, ISSN: 2248-9452</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">20</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and Sarath Babu Duggirala</div>
+      <div class="pr-title">Secure Anonymous Route Discovery Protocol for Ad Hoc Routing in Ad Hoc Wireless Networks</div>
+      <div class="pr-venue">IJCTA, Vol.3 Issue 1, January–February 2012, ISSN: 2229-6093</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">21</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, M. Rajinikanth and P.V. Raj Varma</div>
+      <div class="pr-title">A New Heuristic Approach to Safeguarding Online Digital Data</div>
+      <div class="pr-venue">IJMER, Volume 2, Issue 4, July-August 2012, ISSN: 2249-6645</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">22</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, K. Satya Rajesh and Abdul Ahad</div>
+      <div class="pr-title">A Study of DBSCAN Algorithms for Spatial Data Clustering Techniques</div>
+      <div class="pr-venue">IJCST, Vol.3 Issue 4, Oct-Dec 2012, ISSN: 0976-8491</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">23</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, K. Satya Rajesh and Abdul Ahad</div>
+      <div class="pr-title">A Study on Operating Systems for Wireless Sensor Networks</div>
+      <div class="pr-venue">IJCIIS, Vol.3 Issue 9, November 2012, ISSN: 0976-849</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">24</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and Syed Umar</div>
+      <div class="pr-title">Enhanced Rate Adaptation Mechanisms in IEEE 802.11 WLANs</div>
+      <div class="pr-venue">IJCIIS, Vol.3 Issue 9, November 2012, ISSN: 0976-849</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">25</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, K. Satya Rajesh and L. Sridhara Rao</div>
+      <div class="pr-title">A Study on Black Hole Attack Against OLSR Based MANETs</div>
+      <div class="pr-venue">IJCNWMC, ISSN: 2250-1568; Impact Factor(JCC): 2.5967</div>
+    </div><div class="pr-year">2012</div></div>
+
+    <div class="pub-row"><div class="pr-num">26</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and Dr. Syed Umar</div>
+      <div class="pr-title">Media-Oriented Rate Selection Algorithm for IEEE 802.11 WLANs</div>
+      <div class="pr-venue">IJCER, Volume 1, Issue 5, February 2013, ISSN: 2278-5795</div>
+    </div><div class="pr-year">2013</div></div>
+
+    <div class="pub-row"><div class="pr-num">27</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and S.J. Sultanuddin</div>
+      <div class="pr-title">An Efficient Approach for Countering Black Hole Attack in MANETs</div>
+      <div class="pr-venue">IJCER, Volume 2, Issue 2, April 2013, ISSN: 2278-5795</div>
+    </div><div class="pr-year">2013</div></div>
+
+    <div class="pub-row"><div class="pr-num">28</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and K. Satya Rajesh</div>
+      <div class="pr-title">Location Based Routing Protocols for Underwater Sensor Networks</div>
+      <div class="pr-venue">IJETTCS, Volume 2, Issue 2, March–April 2013, ISSN: 2278-6856</div>
+    </div><div class="pr-year">2013</div></div>
+
+    <div class="pub-row"><div class="pr-num">29</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong></div>
+      <div class="pr-title">A Study of Information Security in E-Commerce Applications</div>
+      <div class="pr-venue">IJCES, Volume 3, Issue 3, May 2013, ISSN: 2250-3439</div>
+    </div><div class="pr-year">2013</div></div>
+
+    <div class="pub-row"><div class="pr-num">30</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong> and K. Sai Rohit Singh</div>
+      <div class="pr-title">Designing a Wi-Fi Enabled Robot</div>
+      <div class="pr-venue">IJCER, Volume 2, Issue 3, June 2013, ISSN: 2278-5795</div>
+    </div><div class="pr-year">2013</div></div>
+
+    <div class="pub-row"><div class="pr-num">31</div><div class="pr-body">
+      <div class="pr-authors"><strong>Mohammed Ali Hussain</strong>, Abdul Rabbani and P.U.V Pavan Kumar</div>
+      <div class="pr-title">Social Tagging of Multimedia Content — A Model</div>
+      <div class="pr-venue">IJMER, Volume 3, Issue 5, September 2013, ISSN: 2249-6645</div>
+    </div><div class="pr-year">2013</div></div>
+
+    <div class="pub-row"><div class="pr-num">32</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and M.N.M. Prasad</div>
+      <div class="pr-title">NTRU Encryption using Huffman Compression</div>
+      <div class="pr-venue">Journal of Theoretical and Applied Information Technology (JTAIT), Vol 59, E-ISSN 1817-3195</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2014</div></div>
+
+    <div class="pub-row"><div class="pr-num">33</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong>, Dr. T.V. Suryanarayana and Dr. Syed Umar</div>
+      <div class="pr-title">Secure Efficient Neighbourhood Discovery in Wireless Networks</div>
+      <div class="pr-venue">IJAER, Vol.9 No.10</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2014</div></div>
+
+    <div class="pub-row"><div class="pr-num">34</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Mohammed Moulana</div>
+      <div class="pr-title">An Implementation of Optimal Id3 Based Decision Tree Algorithm</div>
+      <div class="pr-venue">IJAER, Vol.9 No.12</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2014</div></div>
+
+    <div class="pub-row"><div class="pr-num">35</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong>, Dr. K. Kiran Kumar, Dr. M. Kameswara Rao and Dr. R. Bulli Babu</div>
+      <div class="pr-title">An Optimal Secure and Efficient AODV Protocol for MANETs using Hashing</div>
+      <div class="pr-venue">IJAER, Vol.9 No.14</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2014</div></div>
+
+    <div class="pub-row"><div class="pr-num">36</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and J. Vijaya Chandra</div>
+      <div class="pr-title">Data and Information Storage Security from Advanced Persistent Attack in Cloud Computing</div>
+      <div class="pr-venue">IJAER, Vol.9 No.20</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2014</div></div>
+
+    <div class="pub-row"><div class="pr-num">37</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Shrija Somaraj</div>
+      <div class="pr-title">Securing Medical Images by Image Encryption using Key Image</div>
+      <div class="pr-venue">IJCA, Vol.104 No.3, October 2014</div>
+    </div><div class="pr-year">2014</div></div>
+
+    <div class="pub-row"><div class="pr-num">38</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and M.N.M. Prasad</div>
+      <div class="pr-title">LWE Encryption using LZW Compression</div>
+      <div class="pr-venue">Middle-East Journal of Scientific Research (MEJSR), Volume 23, Issue 4, 2015</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">39</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong></div>
+      <div class="pr-title">Energy Efficient Intrusion Detection Scheme with Clustering for Wireless Sensor Networks</div>
+      <div class="pr-venue">TELKOMNIKA Indonesian Journal of Electrical Engineering, Volume 15, Issue 1, July 2015</div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">40</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong></div>
+      <div class="pr-title">Deployment of Mobile Ad-hoc Network Ticket Based QoS Routing Protocol for Healthcare</div>
+      <div class="pr-venue">Indian Journal of Science &amp; Technology (IJST), Volume 8, Issue 15, July 2015</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">41</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and N.V.K. Ramesh</div>
+      <div class="pr-title">Comparative Analysis of Path Loss Attenuation at Outdoor for 1.8GHz, 2.1GHz in Urban Environment</div>
+      <div class="pr-venue">JATIT, Volume 82, Issue 1, December 2015</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">42</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Satuluri Naganjaneyulu</div>
+      <div class="pr-title">An Optimal Voting Mechanism for Cluster-Based Certificate Revocation in Mobile Ad hoc Networks</div>
+      <div class="pr-venue">MEJSR, Volume 23, Issue 9, November 2015</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">43</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Shrija Somaraj</div>
+      <div class="pr-title">Performance and Security Analysis for Image Encryption using Key Image</div>
+      <div class="pr-venue">IJST, Volume 8, Issue 35, December 2015</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">44</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Shaik Kareemulla</div>
+      <div class="pr-title">ABRD: Acknowledgement Based Route Discovery and Detection of Black-hole Attack in MANET</div>
+      <div class="pr-venue">MEJSR, Vol.23, Issue 5, 2015</div>
+    </div><div class="pr-year">2015</div></div>
+
+    <div class="pub-row"><div class="pr-num">45</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Syed Umar</div>
+      <div class="pr-title">A Proposal for Mitigation of Gray Hole Attack in Wireless Mesh AD-HOC Networks using S-DSDV</div>
+      <div class="pr-venue">JATIT, Vol.84 Issue 1, February 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">46</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Sarath Chandra</div>
+      <div class="pr-title">An Efficient Scheme for Facilitating Secure Data Sharing in Decentralized Disruption Tolerant Networks</div>
+      <div class="pr-venue">IJST, Volume 9 Issue 5, February 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">47</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Md Moulana</div>
+      <div class="pr-title">Incremental Learning Decision Tree Algorithm for Knowledge Discovery</div>
+      <div class="pr-venue">PONTE Journal, Italy, Volume 72, Issue 8, August 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">Thomson Reuters SCI</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">48</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and L. Sridhara Rao</div>
+      <div class="pr-title">Analytical Strategy to Evaluate Medium Access Control for MBSAs</div>
+      <div class="pr-venue">PONTE Journal, Italy, Volume 72, Issue 8, August 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">Thomson Reuters SCI</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">49</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and R. Bulli Babu</div>
+      <div class="pr-title">A Novel Framework for Improving Class Imbalance Learning on Financial Fraud Detection</div>
+      <div class="pr-venue">PONTE Journal, Italy, Volume 72, Issue 9, September 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">Thomson Reuters SCI</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">50</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and S.J. Sultanuddin</div>
+      <div class="pr-title">Dynamic Search Technique used for Improving Passive Source Routing Protocol in MANET</div>
+      <div class="pr-venue">ARPN Journal of Engineering and Applied Sciences, Volume 11, Issue 19, October 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">51</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and T. Bala Murali Krishna</div>
+      <div class="pr-title">An Improved Dynamic Path Discovery and Selection Algorithm for Link Failure in MANET</div>
+      <div class="pr-venue">PONTE Journal, Italy, Volume 72, Issue 12, December 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">Thomson Reuters SCI</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">52</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and K. Durga Prasad</div>
+      <div class="pr-title">A Review on Microarray Image Segmentation Methods</div>
+      <div class="pr-venue">IJCSIS, Vol.14 No.12, December 2016</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">Thomson Reuters ESCI/Web of Science</span></div>
+    </div><div class="pr-year">2016</div></div>
+
+    <div class="pub-row"><div class="pr-num">53</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Shrija Somaraj</div>
+      <div class="pr-title">Image Encryption using Edge Map and Key Image</div>
+      <div class="pr-venue">IJST, Volume 10, Issue 4, January 2017</div>
+    </div><div class="pr-year">2017</div></div>
+
+    <div class="pub-row"><div class="pr-num">54</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Regula Thirupathi</div>
+      <div class="pr-title">Tree Based Cluster Energy Aware Routing in Wireless Sensor Network</div>
+      <div class="pr-venue">IJCSIS, Vol.15 No.2, February 2017</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">Thomson Reuters ESCI</span></div>
+    </div><div class="pr-year">2017</div></div>
+
+    <div class="pub-row"><div class="pr-num">55</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Shrija Somaraj</div>
+      <div class="pr-title">Secure and Novel Methods of Image Encryption using an Image as Key</div>
+      <div class="pr-venue">International Journal of Pharmacy and Information Technology, Volume 9, Issue 1, April 2017</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2017</div></div>
+
+    <div class="pub-row"><div class="pr-num">56</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and P. Suma</div>
+      <div class="pr-title">Node Disjoint Random and Optimal Path Selection (NDROPS) Algorithm for Security in MANETs</div>
+      <div class="pr-venue">International Journal of Electrical and Computer Engineering (IJECE), Vol.7 No.3, June 2017</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2017</div></div>
+
+    <div class="pub-row"><div class="pr-num">57</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and K. Durga Prasad</div>
+      <div class="pr-title">A Robust Method for Reducing Image Noise in Microarray Images</div>
+      <div class="pr-venue">IJPAM, Vol.117 Issue 19, 2017</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2017</div></div>
+
+    <div class="pub-row"><div class="pr-num">58</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong>, Dr. Suman Maloji, Neeraja Kona and Rama Chandra Rao Potu</div>
+      <div class="pr-title">Implementation of Security System for Bank using OpenCV and RFID</div>
+      <div class="pr-venue">International Journal of Engineering &amp; Technology (UAE), Volume 7, Issue 2.7, March 2018</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2018</div></div>
+
+    <div class="pub-row"><div class="pr-num">59</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and P. Suma</div>
+      <div class="pr-title">Secure and Effective Random Paths Selection (SERPS) Algorithm for Security in MANETs</div>
+      <div class="pr-venue">IJE&amp;T (UAE), Volume 7, Issue 2.8, March 2018</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2018</div></div>
+
+    <div class="pub-row"><div class="pr-num">60</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and E. Jayanthi</div>
+      <div class="pr-title">A Novel Approach Certificate Revocation in MANET using Fuzzy Logic</div>
+      <div class="pr-venue">Indonesian Journal of Electrical Engineering and Computer Science, Vol.10 No.2, May 2018</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2018</div></div>
+
+    <div class="pub-row"><div class="pr-num">61</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and S.J. Sultanuddin</div>
+      <div class="pr-title">A Efficient Token-based Adaptive Routing Protocol for Mobile Ad hoc Networks (TbAR)</div>
+      <div class="pr-venue">International Journal of Computers Communications &amp; Control</div>
+      <div class="pr-badges"><span class="pr-badge badge-sci">SCI Journal</span></div>
+    </div><div class="pr-year">2018</div></div>
+
+    <div class="pub-row"><div class="pr-num">62</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Shaik Kareemulla</div>
+      <div class="pr-title">A Chaotic based Integrity Verification and Encryption Model for real-time VANET</div>
+      <div class="pr-venue">Indonesian Journal of Electrical Engineering and Computer Science, Volume 14, Issue 3, 2019</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+    <div class="pub-row"><div class="pr-num">63</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and S.J. Sultanuddin</div>
+      <div class="pr-title">STMR: Secure Token-based Multipath Routing Protocol for MANET using Hybrid Clustering and Path Selection Algorithm</div>
+      <div class="pr-venue">IJITEE, Volume-8 Issue-6, April 2019</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+    <div class="pub-row"><div class="pr-num">64</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and P. Suma</div>
+      <div class="pr-title">FractWhale-DSR: Fractional Whale Optimization based Secure Dynamic Source Routing Algorithm for Mobile Ad-hoc Network</div>
+      <div class="pr-venue">Recent Patents on Computer Science, Bentham Science Publishers</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+    <div class="pub-row"><div class="pr-num">65</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and E. Jayanthi</div>
+      <div class="pr-title">Reliable White List Management Technique for Warned Nodes in MANET</div>
+      <div class="pr-venue">International Journal of Vehicle Information and Communication Systems, Inderscience, 2019</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+    <div class="pub-row"><div class="pr-num">66</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Mohammad Arshad</div>
+      <div class="pr-title">Hybrid Model for Detecting DoS Attacks in Wide Area Networks</div>
+      <div class="pr-venue">International Journal of Recent Technology and Engineering, Volume-8 Issue-2, July 2019</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+    <div class="pub-row"><div class="pr-num">67</div><div class="pr-body">
+      <div class="pr-authors"><strong>Dr. Mohammed Ali Hussain</strong> and Balaji Bhanu</div>
+      <div class="pr-title">Dynamic Monitoring of Agricultural Cultivation using IoT and Cloud Mechanism</div>
+      <div class="pr-venue">IJITEE, Volume-8 Issue-9, July 2019</div>
+      <div class="pr-badges"><span class="pr-badge badge-scopus">Scopus</span></div>
+    </div><div class="pr-year">2019</div></div>
+
+  </div>
+  <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:24px;font-style:italic">* Showing key publications. Full list available on request.</p>
+</div>
+
+<!-- ══════════════════════════════════════
+     INTERNATIONAL CONFERENCES
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="intl-conf">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>Conference Proceedings</div><h2>International Conferences</h2></div>
+    <span class="sec-cnt">15+ Papers</span>
+  </div>
+  <div class="sec-div"></div>
+  <div class="conf-grid">
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>International · Springer AISC</div>
+      <h3>An Image Encryption Technique Using Scan Based Approach and Image as Key</h3>
+      <p>Proceedings of the First International Conference on Computational Intelligence and Informatics, Published by Springer (ISBN: 978-981-10-2470-2)</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-springer">Springer</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE IACC-2016 · Bhimavaram</div>
+      <h3>A Novel Image Encryption Technique using RGB Pixel Displacement for Color Images</h3>
+      <p>6th IEEE International Advance Computing Conference (IACC-2016), IEEE Computer Society — India Council &amp; S R K R Engineering College, Bhimavaram</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-ieee">IEEE Xplore</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>Springer AISC · Visakhapatnam</div>
+      <h3>A New Approach for Integrating Social Data into Groups of Interest</h3>
+      <p>Third International Conference on Information System Design and Intelligent Applications, ANITS, Visakhapatnam — Published by Springer in AISC series, January 2016</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-springer">Springer</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE ICACA 2016 · Coimbatore</div>
+      <h3>A Framework for Efficient Decision Tree using Attributes Elimination and Dual Processing Techniques</h3>
+      <p>IEEE International Conference on Advances in Computer Applications (ICACA 2016), Bharathiar University, Coimbatore, 24th October 2016</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-ieee">IEEE</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE ICCIT 2017 · Chennai</div>
+      <h3>Energy-aware Multi-level Tree-based Clustered Routing in WSN</h3>
+      <p>6th International Conference on Computing, Engineering and Information Technology (ICCEIT 2017), Vijay Park, Chennai, March 4, 2017</p></div>
+      <div class="cc-side"><div class="cc-year">2017</div><span class="cc-pill badge-ieee">IEEE</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>International Conference · Hyderabad</div>
+      <h3>Analysis on Man in the Middle Attack on Secured Socket Layer</h3>
+      <p>MRITICISTCSE-2018, Malla Reddy Institute of Technology, Hyderabad, 19th–20th January 2018, ISBN: 978-93-83038-59-6</p></div>
+      <div class="cc-side"><div class="cc-year">2018</div><span class="cc-pill badge-general">MRIT</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE ICCIC 2013 · Madurai</div>
+      <h3>An Optimized Approach for Generate Simplified Decision Trees</h3>
+      <p>IEEE International Conference on Computational Intelligence and Computing Research (ICCIC 2013), Madurai, Tamil Nadu, December 26–28, 2013</p></div>
+      <div class="cc-side"><div class="cc-year">2013</div><span class="cc-pill badge-ieee">IEEE Xplore</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE ICARET 2013 · KL University</div>
+      <h3>Through Estimated Probability, Path Detection Routing in Delay Tolerant Networks</h3>
+      <p>IEEE International Conference on Advanced Research in Engineering and Technology (ICARET-2013), organized by IEEE IRAQ Section, KL University, Feb 8–9, 2013</p></div>
+      <div class="cc-side"><div class="cc-year">2013</div><span class="cc-pill badge-ieee">IEEE</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE · Anna University, Chennai</div>
+      <h3>Agriculture Field Monitoring and Analysis using Wireless Sensor Networks for Improving Crop Production</h3>
+      <p>International Conference, Anna University, Chennai — Published in IEEE Xplore with IEEE catalog number, ISBN and ISSN</p></div>
+      <div class="cc-side"><div class="cc-year">2014</div><span class="cc-pill badge-ieee">IEEE Xplore</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>IEEE WOCN 2014 · KL University</div>
+      <h3>Monitoring of Soil Parameters for Effective Irrigation using Wireless Sensor Networks</h3>
+      <p>11th International Conference on Wireless and Optical Communications Networks (WOCN-2014), KL University, September 11–13, 2014 — IEEE Xplore &amp; Elsevier indexed</p></div>
+      <div class="cc-side"><div class="cc-year">2014</div><span class="cc-pill badge-ieee">IEEE &amp; Elsevier</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>ICIES 2013 · Vijayawada</div>
+      <h3>A Survey on Warning Bird: A Near Real-Time Detection System for Suspicious URLs in Twitter Stream</h3>
+      <p>International Conference on Information &amp; Engineering Sciences (ICIES-2013), IMRF, Vijayawada, February 21–22, 2013</p></div>
+      <div class="cc-side"><div class="cc-year">2013</div><span class="cc-pill badge-general">IMRF</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>ICMID 2010 · Hyderabad</div>
+      <h3>Networking Issues in Wireless Ad Hoc and Sensor Networks</h3>
+      <p>International Conference on Mobile Internet Devices (ICMID-2010), Gokaraju Rangaraju Institute of Engineering &amp; Technology, HICC Hyderabad, December 17–18, 2010</p></div>
+      <div class="cc-side"><div class="cc-year">2010</div><span class="cc-pill badge-general">HICC</span></div>
+    </div>
+
+    <div class="conf-card">
+      <div><div class="cc-tag"><span class="cc-dot"></span>ICNEAC 2011 · Narasapur</div>
+      <h3>A Survey on Security Issues in Mobile Ad hoc Networks</h3>
+      <p>International Conference on Nanoscience, Engineering &amp; Advanced Computing (ICNEAC-2011), Swarnandhra College of Engineering &amp; Technology, July 8–10, 2011</p></div>
+      <div class="cc-side"><div class="cc-year">2011</div><span class="cc-pill badge-general">IACQER</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     NATIONAL CONFERENCES & JOURNALS
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="national">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>National Level</div><h2>National Conferences &amp; Journals</h2></div>
+    <span class="sec-cnt">25+ Papers</span>
+  </div>
+  <div class="sec-div"></div>
+  <div class="conf-grid">
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>DST Sponsored · Hyderabad · 2017</div>
+      <h3>A Survey on Artificial Intelligence Traveling with Virtual Intelligent Machine</h3>
+      <p>DST Sponsored National Conference on Recent Trends in Big Data Analytics and Cloud Computing, VJIT, Hyderabad, 4th–5th January 2017</p></div>
+      <div class="cc-side"><div class="cc-year">2017</div><span class="cc-pill badge-ugc">DST</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>APSC 2016 · Vijayawada</div>
+      <h3>Future of Farming: An Insight through IoT</h3>
+      <p>Andhra Pradesh Science Congress (APSC 2016), PB Siddhartha College, Vijayawada, 7th–9th November 2016</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-ugc">APAS</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>NCTDA 2016 · Jammu</div>
+      <h3>Selection of Bitplanes in Image Encryption</h3>
+      <p>National Conference on Recent Trends and Technologies in Data Science and AI (NCTDA-2016), University of Jammu, Bhaderwah, August 26–27, 2016</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-general">NCTDA</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>DST Sponsored · Tamil Nadu · 2016</div>
+      <h3>Sensor Web-enabled Pollution Monitoring using WSNs with OGC SWE Standards</h3>
+      <p>DST Sponsored National Conference on DIP, SCSVMV University, October 14–15, 2016</p></div>
+      <div class="cc-side"><div class="cc-year">2016</div><span class="cc-pill badge-ugc">DST</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>NTRIT 2014 · Guntur</div>
+      <h3>Monitoring and Securing Cloud Computing from Advanced Persistent Threat by Forensic Analysis</h3>
+      <p>National Conference on Technological Research in IT (NTRIT-2014), DST Sponsored, Vignan's Foundation, Guntur, September 19–20, 2014</p></div>
+      <div class="cc-side"><div class="cc-year">2014</div><span class="cc-pill badge-ugc">DST</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>DRDO Sponsored · KL University · 2014</div>
+      <h3>Reliable Data Transport in Platform-Based Wireless Sensor Networks</h3>
+      <p>NCWCSN-2014, DRDO Sponsored, KL University, Guntur, March 7–8, 2014</p></div>
+      <div class="cc-side"><div class="cc-year">2014</div><span class="cc-pill badge-ugc">DRDO</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>Elsevier · GITAM · 2013</div>
+      <h3>Layered Architecture of Delay Tolerant Networks</h3>
+      <p>NCETIT-2013, Proceedings published in Elsevier, GITAM University, Visakhapatnam, March 29–30, 2013</p></div>
+      <div class="cc-side"><div class="cc-year">2013</div><span class="cc-pill badge-scopus">Elsevier</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>UGC Sponsored · KBN College · 2011</div>
+      <h3>The New Dynamic Network Selection Methodology for the Wireless Heterogeneous Networks</h3>
+      <p>UGC Sponsored National Seminar NSITRI-2011, KBN College, Vijayawada, July 8–9, 2011</p></div>
+      <div class="cc-side"><div class="cc-year">2011</div><span class="cc-pill badge-ugc">UGC</span></div>
+    </div>
+
+    <div class="conf-card"><div>
+      <div class="cc-tag"><span class="cc-dot"></span>National Seminar · Krishna University · 2012</div>
+      <h3>A New Approach to Generate Simplified Decision Trees Based on Principal Component Analysis</h3>
+      <p>National Seminar on RTICT-2011, Krishna University, Andhra Pradesh, January 7–8, 2012</p></div>
+      <div class="cc-side"><div class="cc-year">2012</div><span class="cc-pill badge-general">KSOU</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     REVIEW MEMBER
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="review">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>Editorial Boards &amp; Committees</div><h2>Review Member</h2></div>
+    <span class="sec-cnt">50+ Journals &amp; Conferences</span>
+  </div>
+  <div class="sec-div"></div>
+
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--navy);margin-bottom:16px;font-weight:600">International Journal Technical Review Member</h3>
+  <div class="review-cols" style="margin-bottom:40px">
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>Journal of Computational Science</strong><em>Scopus &amp; Elsevier Indexed</em></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer Science and Information Security (IJCSIS)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>IEEE/ACM Transactions on Networking</strong><em>Premier Networking Research Journal</em></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer Systems Science and Engineering (IJCSSE)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Advancements in Computing Technology (IJACT)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer Networks (IJCN)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer Science Issues (IJCSI)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Secure Digital Information Age (IJSDIA)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer Science &amp; Information Technology (IJCSIT)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Advanced Computer Science and Applications (IJACSA)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>Journal on Wireless and Mobile Communication (JWMC)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>Indian Journal of Science and Technology (JST)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer and Electrical Engineering (IJCEE)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>The International Arab Journal of Information Technology (IAJIT)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer Engineering Research (IJCER)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Computer and Information Technology (IJCIT)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Scientific and Engineering Research (IJSER)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal on Cloud Computing: Services and Architecture (IJCCSA)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>International Journal of Research in Engineering &amp; Technology (IJRET)</strong></span></div>
+    <div class="rev-row"><div class="rev-dot"></div><span><strong>Association of Scientists, Developers and Faculties (ASDF)</strong><em>International Journals &amp; Conferences</em></span></div>
+  </div>
+
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--navy);margin-bottom:16px;font-weight:600">IEEE &amp; International Conference Review / Program Committees</h3>
+  <div class="committee-grid">
+    <div class="com-card"><div class="com-dot"></div><span>Peer Technical Review Member, IEEE ICMLC 2011, Singapore</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Technical Review Member, IEEE Symposium on Computers &amp; Informatics (ISCI 2011), Malaysia</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Technical Review Member, IEEE ICCIC 2012, Tamilnadu College of Engineering, Coimbatore</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Technical Review Member, IEEE ISWTA 2012 — Wireless Telecommunications Applications</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Technical Review Member, IEEE Symposium on Computers &amp; Informatics 2013, Langkawi, Malaysia</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, WiMoA-2011 — 3rd Intl. Conference on Wireless, Mobile Networks, Dubai</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, ICCSA 2011 — 11th Intl. Conference, University of Cantabria, Spain</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, IEEE APACE 2012, Melaka, Malaysia</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, INC 2012 — 8th Intl. Conference on Networked Computing, Gyeongju, Korea</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, WICT-2011 — World Congress on ICT, Mumbai, India</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, ICEI 2011 — Intl. Conference on Engineering and Industries, Jeju, Korea</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, ICCSEA-2012 — Intl. Conference on CS, Engineering &amp; Applications, Delhi</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, WCCCT-2014 — World Congress on Computing &amp; Communication Technologies</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Program Committee Member, ICT-EurAsia 2013, Yogyakarta, Indonesia</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Technical Committee Member, ICCS 2015 — Global Conference on Cryptography &amp; Security, KL, Malaysia</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Programme Committee Member, ICAT2E2017 — Advanced Technologies Enhancing Education, Qingdao, China</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Advisory Board Member, ICRITCSA-2016, M S Ramaiah Institute of Technology, Bangalore</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>International Advisory Board Member, 4th Global Conference on CS, Software, Networks &amp; Engineering, Turkey 2016</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Conference Chair, International Congress on Ad-Hoc Networks 2018 (ASDF International)</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Scientific Committee Member, ICCCIT 2014 — Communications, Control &amp; Information Technology, Singapore</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>Technical Program Committee, IOCRSEM 2014 — Intl. Online Conference on Research in Science, Dehradun</span></div>
+    <div class="com-card"><div class="com-dot"></div><span>International Scientific Committee, 4th World Conference on Innovation &amp; CS (INSODE-2014), Rome</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MEMBERSHIPS
+══════════════════════════════════════ -->
+<div class="sec-wrap fade-up" data-cat="memberships">
+  <div class="sec-top">
+    <div><div class="sec-tag"><span class="tbar"></span>Professional Affiliations</div><h2>Editorial Board &amp; Memberships</h2></div>
+    <span class="sec-cnt">130+ Affiliations</span>
+  </div>
+  <div class="sec-div"></div>
+  <p style="font-size:13px;color:var(--mid);margin-bottom:24px;line-height:1.7">Chief Technical Advisory Board Member / Editor in Chief / Advisory Board Member / Executive Editor / Editorial Board Member / Technical Committee Member / Senior Member across the following journals and organizations:</p>
+  <div class="mem-grid">
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Soft Computing and Engineering (IJSCE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Engineering and Advanced Technology (IJEAT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Recent Technology and Engineering (IJRTE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Engineering and Innovative Technology (IJEIT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Engineering, Science and Innovative Technology (IJESIT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Association of Scientific Innovation and Research (IASIR)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Research and Reviews in Ad hoc Networks (IJRRAN)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer Science and Communication Networks (IJCSCN)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Journal of Theoretical and Applied Information Technology (JTAIT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Indian Journal of Science &amp; Technology (IJST)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Emerging Trends &amp; Technology in Computer Science (IJETTCS)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Journal of Computer Science &amp; Engineering (JCSE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computational Intelligence and Information Security (IJCIIS)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Modern Engineering Research (IJMER)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Electronics Communication and Computer Engineering (IJECCE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Engineering Science and Technology: An International Journal (ESTIJ)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Software Engineering (IJSE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Artificial Intelligence and Neural Networks (IJAINN)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Journal of Internet and Information Systems (JIIS)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer Trends and Technology (IJCTT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Engineering Trends and Technology (IJETT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Mathematics Trends and Technology (IJMTT)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer Technology and Applications (IJCTA)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Journal of Engineering and Computer Innovations (JECI)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer Science and Management Research (IJCSMR)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Advanced Computer Engineering and Architecture (IJACEA)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Latest Trends in Computing (IJLTC)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Application or Innovation in Engineering &amp; Management (IJAIEM)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer &amp; Electronics Research (IJCER)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Artificial Intelligence and Mechatronics (IJAIM)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Innovative Research in Computer and Communication Engineering (IJIRCCE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer Networks and Wireless Communications (IJCNWC)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Computer Network and Information Security (IJCNIS), MECS, Hong Kong</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Advanced Research in Engineering &amp; Technology (IJARET)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Journal of Data &amp; Network Security (IJDNS)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>The Advances in Science, Technology and Engineering Systems Journal (ASTESJ)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Journal of Computer Networks, Science and Education Publishing, USA</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Research Journal of Engineering Sciences (IRJES)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Publisher for Advanced Scientific Journals (IPASJ)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Association of Computer Science and Information Technology (IACSIT), Singapore</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Fellow of Indian Society of Electrical &amp; Electronics Engineers (FISEEE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Member, Association of Scientists, Developers and Faculties (ASDF) — International</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Association of Engineers and Scientists (IAEST)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Research Association of Computer Science &amp; Technology (IRACST)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Association of Engineers (IAENG), Hong Kong</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Universal Association of Computer and Electronics Engineers (UACEE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Institute of Research Engineers and Doctors (IRED)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Internet Society (ISOC) — India Kolkata &amp; Bangalore Chapters</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Indian Society for Technical Education (ISTE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Computer Science Teachers Association (CSTA), USA</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Tata Institute of Fundamental Research (TIFR), Mumbai — School of Technology &amp; CS</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Indian Association for Research in Computing Science (IARCS), Mumbai</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Speech Communication Association (ISCA)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>World Association of Young Scientists Science (WAYS)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>International Association of Online Engineering (IAOE)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Academy &amp; Industry Research Collaboration Center (AIRCC)</span></div>
+    <div class="mem-card"><div class="mem-dot"></div><span>Global Research Publications, New Delhi, India</span></div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<!-- FOOTER: replace fc-ico src="" with location/email/web icons -->
+<footer id="contact">
+  <div class="foot-grid">
+   
+    <div class="footer-brand">
+  <a href="../index.html" class="logo">
+    <div class="logo-av">DR</div>
+    <div class="logo-txt">
+      <b style="display:block;font-size:13px;font-weight:600;color:#ffffff">Mohammed Ali Hussain</b>
+      <span style="display:block;font-size:10.5px;color:var(--gold);font-weight:500;letter-spacing:.6px">Professor · Ph.D CS&amp;E</span>
+    </div>
+  </a>
+  <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;max-width:270px;margin-top:13px">
+    Professor Dr. Mohammed Ali Hussain received his Ph.D. in Computer Science &amp; Engineering from Acharya Nagarjuna University, India. He has more than 17 years of teaching experience in India and Abroad.
+  </p>
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener"
+     style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 16px;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);text-decoration:none;transition:.22s;"
+     onmouseover="this.style.background='rgba(0,119,181,.25)';this.style.borderColor='rgba(0,119,181,.55)'"
+     onmouseout="this.style.background='rgba(255,255,255,.07)';this.style.borderColor='rgba(255,255,255,.13)'">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    <span style="font-size:12px;color:rgba(255,255,255,.65);font-weight:500;letter-spacing:.4px">LinkedIn Profile</span>
+  </a>
+</div>
+    <div>
+      <div class="foot-h">Achievements</div>
+      <ul class="foot-ul">
+        <li><a href="#">Bharath Shiksha Award '18</a></li>
+        <li><a href="#">Indian Status Award '18</a></li>
+        <li><a href="#">Mahatma Gandhi Award '18</a></li>
+        <li><a href="#">Best Teacher Award '17</a></li>
+        <li><a href="#">Rashtriya Gaurav Award '17</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">Contact Info</div>
+      <div class="foot-contact">
+        <div class="fc-row">
+          <img class="fc-ico" src="../images/icons/location.png" alt="location">
+          <div><div class="fc-lbl">Location</div><div class="fc-val">Vijayawada, Andhra Pradesh, India</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images/icons/email.png" alt="email">
+          <div><div class="fc-lbl">Email</div><div class="fc-val">alihussain.phd@gmail.com</div></div>
+        </div>
+        <div class="fc-row">
+          <img class="fc-ico" src="../images//icons/website.png" alt="website">
+          <div><div class="fc-lbl">Website</div><div class="fc-val">www.dralihuissain.in</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <p>&copy; 2024 Dr. Mohammed Ali Hussain &mdash; All Rights Reserved.</p>
+   <!-- <p style="color:rgba(201,151,42,.4);font-size:11px;letter-spacing:1.5px">DESIGNED WITH EXCELLENCE</p>-->
+  </div>
+</footer>
+
+<script>
+/* ══ MOBILE MENU ══ */
+function openMob() {
+  document.getElementById('mobNav').classList.add('open');
+  document.querySelector('.ham').style.display = 'none';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMob() {
+  document.getElementById('mobNav').classList.remove('open');
+  document.querySelector('.ham').style.display = 'flex';
+  document.body.style.overflow = '';
+}
+
+// Close on ESC key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMob();
+});
+
+// Close when clicking outside the links area
+document.getElementById('mobNav').addEventListener('click', function(e) {
+  if (e.target === this) closeMob();
+});
+
+/* ══ FILTER ══ */
+function filter(cat, btn) {
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.sec-wrap').forEach(s => {
+    s.classList.toggle('hidden', cat !== 'all' && s.dataset.cat !== cat);
+  });
+  window.scrollTo({ top: document.querySelector('.filter-bar').offsetTop - 66, behavior: 'smooth' });
+}
+
+/* ══ FADE REVEAL ══ */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* ══ NAV SCROLL SHADOW ══ */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').style.boxShadow =
+    window.scrollY > 40
+      ? '0 2px 24px rgba(0,0,0,.1)'
+      : '0 2px 20px rgba(0,0,0,.05)';
+}, { passive: true });
+</script>
+</body>
+</html>
+
