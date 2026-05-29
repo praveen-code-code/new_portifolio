@@ -10,17 +10,11 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.secret_key = os.environ.get('SECRET_KEY', 'drali-secret-key-2024')
 
-database_url = os.environ.get(
-    'DATABASE_URL',
-    'postgresql://postgres:1616@localhost:5432/dr_ali_portfolio'
-)
-
-if database_url.startswith("postgres://"):
-    database_url = database_url.replace("postgres://", "postgresql://", 1)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = database_url
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(BASE_DIR, 'database.db')
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 UPLOAD_FOLDER = os.path.join(BASE_DIR, 'uploads')
 
