@@ -126,19 +126,22 @@ def download_file(pdf_id):
                                as_attachment=True, download_name=pdf.original_name)
 
 # ── Admin auth ────────────────────────────────────────────────────────────────
-@app.route('/admin/login', methods=['GET', 'POST'])
-def admin_login():
-    if session.get('admin_id'):
-        return redirect(url_for('admin_dashboard'))
-    if request.method == 'POST':
-        admin = Admin.query.filter_by(username=request.form['username']).first()
-        if admin and admin.check_password(request.form['password']):
-            session['admin_id']   = admin.id
-            session['admin_user'] = admin.username
-            flash('Welcome back!', 'success')
-            return redirect(url_for('admin_dashboard'))
-        flash('Invalid credentials.', 'error')
-    return render_template('admin/login.html')
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+
+    if request.method == "POST":
+
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        if username == "admin" and password == "admin123":
+            return redirect(url_for("index"))
+
+        flash("Invalid username or password", "error")
+
+    return render_template("login.html")
+
 
 @app.route('/admin/logout')
 def admin_logout():
